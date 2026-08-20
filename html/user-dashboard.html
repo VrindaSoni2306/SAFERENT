@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard | SafeRent</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/user-dashboardstyle.css">
+<link rel="stylesheet" href="../css/responsive1.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h1>SafeRent</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="user-dashboard.html" class="nav-item active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favorites</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-star"></i>
+                <span>Reviews</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>Complaints</span>
+            </a>
+
+            <a href="#" class="nav-item logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- main -->
+
+    <main class="main-content">
+
+
+        <!-- topbar -->
+
+        <header class="topbar">
+
+            <div class="dashboard-title">
+                <h2>User Dashboard</h2>
+            </div>
+
+
+            <!-- Search bar-->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search properties..."
+                >
+
+                <button type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Right Side -->
+
+            <div class="topbar-right">
+
+                <!-- Notification -->
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </div>
+
+
+                <!-- User -->
+
+                <div class="user-profile">
+
+                    <div class="profile-circle">
+                        V
+                    </div>
+
+                    <div class="user-info">
+
+                        <h4>Vanshdeep</h4>
+
+                        <span>User</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!--welcome -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-content">
+
+                <h1>
+                    Welcome Back, Vanshdeep
+                    <span>👋</span>
+                </h1>
+
+                <p>
+                    Manage your bookings, favorites, reviews and profile
+                    from your dashboard.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-action">
+
+                <a href="#" class="booking-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    New Booking
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Dashboard Stats -->
+<div class="stats-container">
+
+    <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div>
+            <h3>4</h3>
+            <p>Total Bookings</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">❤️</div>
+        <div>
+            <h3>8</h3>
+            <p>Favorites</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div>
+            <h3>3</h3>
+            <p>Reviews</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">⚠️</div>
+        <div>
+            <h3>1</h3>
+            <p>Complaints</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Upcoming Booking -->
+<div class="dashboard-section">
+
+    <div class="section-header">
+        <h2>Upcoming Booking</h2>
+        <a href="my-bookings.html">View All</a>
+    </div>
+
+    <div class="booking-card">
+
+        <div class="booking-info">
+            <h3>SafeStay Premium PG</h3>
+            <p>📍 Chandigarh, Punjab</p>
+            <p>📅 25 August 2026</p>
+        </div>
+
+        <div class="booking-status">
+            <span>Confirmed</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Recommended Properties -->
+<div class="dashboard-section">
+
+    <div class="section-header">
+        <h2>Recommended Properties</h2>
+        <a href="property-list.html">View All</a>
+    </div>
+
+    <div class="property-container">
+
+        <div class="property-card">
+
+            <div class="property-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwSo0yjMtl02tP9V7AVLFdGD9uGlsPWqp1m4osmUQaRQ&s" alt="PG">
+            </div>
+
+            <div class="property-content">
+                <h3>SafeStay Premium PG</h3>
+
+                <p>📍 Chandigarh</p>
+
+                <div class="property-bottom">
+                    <strong>₹8,500/month</strong>
+                    <span>⭐ 4.8</span>
+                </div>
+
+                <a href="property-details.html" class="view-btn">
+                    View Details
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="property-card">
+
+            <div class="property-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUh_PteFkjsdxIDYDAvIfaIAgLDOMCoVR9lcEAwHMheRshaz0cUecS6eD0&s=10" alt="PG">
+            </div>
+
+            <div class="property-content">
+                <h3>Women Comfort PG</h3>
+
+                <p>📍 Mohali</p>
+
+                <div class="property-bottom">
+                    <strong>₹7,500/month</strong>
+                    <span>⭐ 4.6</span>
+                </div>
+
+                <a href="property-details.html" class="view-btn">
+                    View Details
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="property-card">
+
+            <div class="property-image">
+                <img src="https://images.jdmagicbox.com/v2/comp/indore/j2/0731px731.x731.260430122002.u5j2/catalogue/aadinath-boys-hostel-2-madhumilan-square-indore-paying-guest-accommodations-v7y6rzaf9f.jpg" alt="PG">
+            </div>
+
+            <div class="property-content">
+                <h3>Secure Living PG</h3>
+
+                <p>📍 Panchkula</p>
+
+                <div class="property-bottom">
+                    <strong>₹9,000/month</strong>
+                    <span>⭐ 4.9</span>
+                </div>
+
+                <a href="property-details.html" class="view-btn">
+                    View Details
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="../js/script1.js"></script>
+
+</body>
+
+</html>
