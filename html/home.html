@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SafeRent</title>
 
@@ -17,7 +19,6 @@
 <body>
 
     <!-- Navbar -->
-
     <nav class="navbar">
 
         <div class="logo">
@@ -26,8 +27,8 @@
         </div>
 
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Properties</a></li>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -37,8 +38,7 @@
     </nav>
 
 
-    <!-- image -->
-
+    <!-- Hero -->
     <section class="hero">
 
         <div class="hero-text">
@@ -56,16 +56,114 @@
                 and comfort.
             </p>
 
-            <button>Explore Properties</button>
+            <button id="exploreBtn">Explore Properties</button>
 
         </div>
-
 
         <div class="hero-img">
             <img src="../images/homePic.jpg" alt="Safe accommodation">
         </div>
 
     </section>
+
+
+    <!-- Why SafeRent -->
+    <section class="why">
+
+        <small>WHY SAFERENT?</small>
+
+        <h2>Safety Comes First</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Verified Properties</h3>
+                <p>Find trusted and verified accommodation options.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Women's Safety</h3>
+                <p>Accommodation focused on safety and privacy.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-house"></i>
+                <h3>Comfortable Stay</h3>
+                <p>Choose a place that feels safe and comfortable.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Popular Properties -->
+
+<section class="properties-preview">
+
+    <div class="section-title">
+        <small>EXPLORE</small>
+        <h2>Popular Properties</h2>
+        <p>Explore some of our available accommodation options.</p>
+    </div>
+
+    <div class="property-cards">
+
+        <div class="property-card">
+            <img src="../images/homePic.jpg" alt="Safe PG">
+
+            <div class="property-info">
+                <h3>Comfort PG for Women</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Chandigarh</p>
+                <strong>₹8,000 / month</strong>
+                <a href="properties.html">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="property-card">
+            <img src="../images/homePic.jpg" alt="Women's Hostel">
+
+            <div class="property-info">
+                <h3>SafeStay Hostel</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Mohali</p>
+                <strong>₹7,500 / month</strong>
+                <a href="properties.html">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="property-card">
+            <img src="../images/homePic.jpg" alt="Shared Accommodation">
+
+            <div class="property-info">
+                <h3>Secure Shared Room</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Panchkula</p>
+                <strong>₹6,500 / month</strong>
+                <a href="properties.html">View Details</a>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="properties.html" class="view-all">
+        View All Properties
+    </a>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>
+            <i class="fa-solid fa-house-user"></i> SafeRent
+        </h3>
+
+        <p>Find a safe place, not just a room.</p>
+
+        <p>© 2026 SafeRent. All Rights Reserved.</p>
+    </footer>
 
 
     <script src="../js/script.js"></script>
