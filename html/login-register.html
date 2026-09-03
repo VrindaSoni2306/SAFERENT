@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Login & Register</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="../css/login_style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            SafeRent
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Properties</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+            <li>
+                <a href="#"
+                   class="login-btn"
+                   id="navbarLogin">
+
+                    Login
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= LOGIN / REGISTER SECTION ================= -->
+
+    <section class="login-container">
+
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <div class="left-panel">
+
+            <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=80"
+                alt="SafeRent Apartment">
+
+
+            <div class="overlay">
+
+
+                <h1>
+                    SafeRent
+                </h1>
+
+
+                <p>
+                    Find a Safe Place,
+                    Not Just a Room.
+                </p>
+
+
+                <div class="feature">
+
+                    ✅ Verified Owners
+
+                </div>
+
+
+                <div class="feature">
+
+                    🛡 Safety Score
+
+                </div>
+
+
+                <div class="feature">
+
+                    ⭐ Trusted Reviews
+
+                </div>
+
+
+                <div class="feature">
+
+                    📍 Safe Locations
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= RIGHT PANEL ================= -->
+
+        <div class="right-panel">
+
+
+            <div class="form-card">
+
+
+                <!-- HEADING -->
+
+                <h2 id="formTitle">
+
+                    Welcome Back 👋
+
+                </h2>
+
+
+                <p id="formSubtitle">
+
+                    Login to continue to SafeRent
+
+                </p>
+
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div id="successMessage"
+                     class="success-message">
+
+                </div>
+
+
+
+                <!-- ERROR MESSAGE -->
+
+                <div id="errorMessage"
+                     class="error-message">
+
+                </div>
+
+
+
+                <!-- ================= TABS ================= -->
+
+                <div class="tabs">
+
+
+                    <button
+                        type="button"
+                        id="loginTab"
+                        class="tab active">
+
+                        Login
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="registerTab"
+                        class="tab">
+
+                        Register
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ================= LOGIN FORM ================= -->
+
+                <form id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-box">
+
+                        <label for="loginEmail">
+
+                            Email
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-box">
+
+                        <label for="loginPassword">
+
+                            Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER / FORGOT -->
+
+                    <div class="remember">
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe">
+
+                            Remember Me
+
+                        </label>
+
+
+                        <a href="#"
+                           id="forgotPassword">
+
+                            Forgot Password?
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Login
+
+                    </button>
+
+
+                    <!-- REGISTER LINK -->
+
+                    <p class="bottom-text">
+
+                        Don't have an account?
+
+                        <a href="#"
+                           id="bottomRegister">
+
+                            Register
+
+                        </a>
+
+                    </p>
+
+
+                </form>
+
+
+
+                <!-- ================= REGISTER FORM ================= -->
+
+                <form id="registerForm"
+                      class="hidden">
+
+
+                    <!-- NAME -->
+
+                    <div class="input-box">
+
+                        <label for="registerName">
+
+                            Full Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-box">
+
+                        <label for="registerEmail">
+
+                            Email
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-box">
+
+                        <label for="registerPassword">
+
+                            Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="input-box">
+
+                        <label for="confirmPassword">
+
+                            Confirm Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required>
+
+                            I agree to the Terms & Conditions
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Create Account
+
+                    </button>
+
+
+
+                    <!-- LOGIN LINK -->
+
+                    <p class="bottom-text">
+
+                        Already have an account?
+
+                        <a href="#"
+                           id="bottomLogin">
+
+                            Login
+
+                        </a>
+
+                    </p>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/script2.js"></script>
+
+
+</body>
+
+</html>
