@@ -1,0 +1,748 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body {
+
+    background: #f8f9fc;
+
+    color: #333;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 80px;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #d63384;
+
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: #333;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #d63384;
+
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+
+    background: #d63384;
+
+    color: white !important;
+
+    padding: 12px 24px;
+
+    border-radius: 7px;
+
+}
+
+
+.login-btn:hover {
+
+    background: #b92a72;
+
+}
+
+
+/* =====================================================
+   MAIN LOGIN SECTION
+===================================================== */
+
+.login-container {
+
+    display: flex;
+
+    min-height: calc(100vh - 88px);
+
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.left-panel {
+
+    width: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.left-panel img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(214, 51, 132, 0.75);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 60px;
+
+}
+
+
+.overlay h1 {
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+
+.overlay p {
+
+    font-size: 24px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.feature {
+
+    font-size: 19px;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.right-panel {
+
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f8f9fc;
+
+    padding: 40px;
+
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.form-card {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    background: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =====================================================
+   FORM HEADING
+===================================================== */
+
+.form-card h2 {
+
+    text-align: center;
+
+    color: #d63384;
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-card > p {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.success-message {
+
+    display: none;
+
+    background: #e8f8ef;
+
+    color: #16834b;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.error-message {
+
+    display: none;
+
+    background: #fdecec;
+
+    color: #d93025;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.tabs {
+
+    display: flex;
+
+    background: #f1f1f1;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    margin-bottom: 28px;
+
+}
+
+
+.tab {
+
+    width: 50%;
+
+    border: none;
+
+    padding: 16px;
+
+    background: transparent;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.tab.active {
+
+    background: #d63384;
+
+    color: white;
+
+}
+
+
+.tab:hover {
+
+    background: #d63384;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   INPUT BOX
+===================================================== */
+
+.input-box {
+
+    margin-bottom: 18px;
+
+}
+
+
+.input-box label {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.input-box input:focus {
+
+    border-color: #d63384;
+
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+
+}
+
+
+/* =====================================================
+   REMEMBER ME
+===================================================== */
+
+.remember {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 10px 0 25px;
+
+    font-size: 14px;
+
+}
+
+
+.remember label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.remember input {
+
+    accent-color: #d63384;
+
+}
+
+
+.remember a {
+
+    color: #d63384;
+
+}
+
+
+.remember a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.terms {
+
+    margin: 10px 0 22px;
+
+    font-size: 13px;
+
+}
+
+
+.terms label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.terms input {
+
+    accent-color: #d63384;
+
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submit-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #d63384;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #b92a72;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   BOTTOM TEXT
+===================================================== */
+
+.bottom-text {
+
+    text-align: center;
+
+    margin-top: 24px;
+
+    margin-bottom: 0 !important;
+
+    font-size: 14px;
+
+    color: #777;
+
+}
+
+
+.bottom-text a {
+
+    color: #d63384;
+
+    font-weight: 600;
+
+}
+
+
+.bottom-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   HIDDEN CLASS
+===================================================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        padding: 18px 30px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+    }
+
+
+    .login-container {
+
+        flex-direction: column;
+
+    }
+
+
+    .left-panel {
+
+        width: 100%;
+
+        min-height: 450px;
+
+    }
+
+
+    .right-panel {
+
+        width: 100%;
+
+        padding: 30px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 15px 20px;
+
+    }
+
+
+    .logo {
+
+        font-size: 25px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .overlay {
+
+        padding: 30px;
+
+    }
+
+
+    .overlay h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .overlay p {
+
+        font-size: 18px;
+
+    }
+
+
+    .form-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .form-card h2 {
+
+        font-size: 27px;
+
+    }
+
+}
