@@ -1,0 +1,504 @@
+/* 
+ USER DASHBOARD
+   Dashboard Specific CSS
+*/
+
+
+/* 
+   WELCOME CARD
+ */
+
+.welcome-card {
+    margin-top: 35px;
+
+    min-height: 235px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 45px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/*
+   WELCOME CONTENT
+*/
+
+.welcome-content h1 {
+    font-size: 40px;
+
+    margin-bottom: 18px;
+
+    color: #222222;
+}
+
+.welcome-content h1 span {
+    font-size: 35px;
+}
+
+.welcome-content p {
+    color: #777777;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+/*
+   NEW BOOKING BUTTON
+ */
+
+.booking-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 195px;
+
+    padding: 16px 24px;
+
+    background: #d63384;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background: #c42d76;
+
+    transform: translateY(-2px);
+}
+
+
+/* 
+   DASHBOARD STATS
+*/
+
+.stats-container {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* 
+   STATS CARD
+\ */
+
+.stat-card {
+    background: #ffffff;
+
+    min-height: 130px;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* 
+   STATS ICON
+ */
+
+.stat-icon {
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 12px;
+
+    background: #fce4f0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+}
+
+
+/* 
+   STATS TEXT
+ */
+
+.stat-card h3 {
+    font-size: 30px;
+
+    margin-bottom: 5px;
+
+    color: #222222;
+}
+
+.stat-card p {
+    color: #777777;
+
+    font-size: 15px;
+}
+
+
+/*
+   DASHBOARD SECTION
+ */
+
+.dashboard-section {
+    margin-top: 30px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px 35px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/*
+   SECTION HEADER
+ */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.section-header h2 {
+    font-size: 25px;
+
+    color: #222222;
+}
+
+.section-header a {
+    color: #d63384;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+}
+
+
+/* 
+   UPCOMING BOOKING
+ */
+
+.booking-card {
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.booking-info h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.booking-info p {
+    color: #777777;
+
+    font-size: 15px;
+
+    margin-top: 6px;
+}
+
+
+/* 
+   BOOKING STATUS
+ */
+
+.booking-status span {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    background: #e8f7ee;
+
+    color: #198754;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* 
+   RECOMMENDED PROPERTIES
+ */
+
+.property-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* 
+   PROPERTY CARD
+ */
+
+.property-card {
+    border: 1px solid #eeeeee;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 
+   PROPERTY IMAGE
+ */
+
+.property-image {
+    width: 100%;
+
+    height: 180px;
+
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* 
+   PROPERTY CONTENT
+ */
+
+.property-content {
+    padding: 20px;
+}
+
+.property-content h3 {
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.property-content > p {
+    color: #777777;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* 
+   PROPERTY BOTTOM
+ */
+
+.property-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.property-bottom strong {
+    color: #d63384;
+
+    font-size: 16px;
+}
+
+.property-bottom span {
+    font-size: 14px;
+
+    color: #555555;
+}
+
+
+/* 
+   VIEW DETAILS BUTTON
+ */
+
+.view-btn {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 11px;
+
+    background: #d63384;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #c42d76;
+}
+
+
+/* 
+   DASHBOARD RESPONSIVE
+ */
+
+@media (max-width: 1100px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .welcome-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 35px 25px;
+    }
+
+    .welcome-content h1 {
+        font-size: 30px;
+    }
+
+    .welcome-content p {
+        font-size: 17px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .property-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .dashboard-section {
+        padding: 22px 18px;
+    }
+
+    .section-header h2 {
+        font-size: 21px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+}
