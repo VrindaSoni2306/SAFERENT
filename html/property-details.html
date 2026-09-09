@@ -107,8 +107,7 @@
                 <img
                     id="propertyImage"
                     src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80"
-                    alt="Property"
-                >
+                    alt="Property">
 
             </div>
 
@@ -286,13 +285,28 @@
 
 
 
-                <!-- ================= ACTION BUTTON ================= -->
+                <!-- ================= ACTION BUTTONS ================= -->
 
                 <div class="details-actions">
 
-                    <button class="contact-owner-btn" id="contactOwnerBtn">
-    Contact Owner
-</button>
+
+                    <button
+                        class="contact-owner-btn"
+                        id="contactOwnerBtn">
+
+                        Contact Owner
+
+                    </button>
+
+
+                    <button
+                        class="book-property-btn"
+                        id="bookPropertyBtn">
+
+                        Book Property
+
+                    </button>
+
 
                 </div>
 
@@ -301,6 +315,191 @@
 
         </div>
 
+
+
+        <!-- ================= BOOKING FORM ================= -->
+
+        <div class="booking-container"
+             id="bookingContainer"
+             style="display:none;">
+
+
+            <h2>
+                Book This Property
+            </h2>
+
+
+            <p>
+                Please enter your details to send a booking request.
+            </p>
+
+
+
+            <!-- FULL NAME -->
+
+            <div class="booking-input">
+
+                <label for="bookingName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingName"
+                    placeholder="Enter your full name">
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="booking-input">
+
+                <label for="bookingEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="bookingEmail"
+                    placeholder="Enter your email">
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="booking-input">
+
+                <label for="bookingPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingPhone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+
+            <!-- MOVE-IN DATE -->
+
+            <div class="booking-input">
+
+                <label for="moveInDate">
+                    Move-in Date
+                </label>
+
+                <input
+                    type="date"
+                    id="moveInDate">
+
+            </div>
+
+
+
+            <!-- STAY DURATION -->
+
+            <div class="booking-input">
+
+                <label for="stayDuration">
+                    Stay Duration
+                </label>
+
+                <select id="stayDuration">
+
+                    <option value="">
+                        Select duration
+                    </option>
+
+                    <option value="3 Months">
+                        3 Months
+                    </option>
+
+                    <option value="6 Months">
+                        6 Months
+                    </option>
+
+                    <option value="1 Year">
+                        1 Year
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- NUMBER OF PEOPLE -->
+
+            <div class="booking-input">
+
+                <label for="numberOfPeople">
+                    Number of People
+                </label>
+
+                <input
+                    type="number"
+                    id="numberOfPeople"
+                    min="1"
+                    placeholder="Enter number of people">
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="booking-input">
+
+                <label for="bookingRequirements">
+                    Message / Requirements
+                </label>
+
+                <textarea
+                    id="bookingRequirements"
+                    placeholder="Enter any additional requirements..."></textarea>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                class="submit-booking-btn"
+                id="submitBookingBtn">
+
+                Submit Booking Request
+
+            </button>
+
+
+
+            <!-- CANCEL -->
+
+            <button
+                class="cancel-booking-btn"
+                id="cancelBookingBtn">
+
+                Cancel
+
+            </button>
+
+
+
+            <!-- RESULT -->
+
+            <p id="bookingResult"></p>
+
+
+        </div>
+
+
     </main>
 
 
@@ -308,6 +507,142 @@
     <!-- ================= JAVASCRIPT ================= -->
 
     <script src="../js/property-details.js"></script>
+
+
+    <!-- ================= BOOKING JAVASCRIPT ================= -->
+
+    <script>
+
+        const bookPropertyBtn =
+            document.getElementById("bookPropertyBtn");
+
+        const bookingContainer =
+            document.getElementById("bookingContainer");
+
+        const submitBookingBtn =
+            document.getElementById("submitBookingBtn");
+
+        const cancelBookingBtn =
+            document.getElementById("cancelBookingBtn");
+
+
+        /* OPEN BOOKING FORM */
+
+        bookPropertyBtn.addEventListener("click", function () {
+
+            bookingContainer.style.display = "block";
+
+            bookingContainer.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* CANCEL BOOKING */
+
+        cancelBookingBtn.addEventListener("click", function () {
+
+            bookingContainer.style.display = "none";
+
+        });
+
+
+        /* SUBMIT BOOKING */
+
+        submitBookingBtn.addEventListener("click", function () {
+
+            const name =
+                document.getElementById("bookingName").value.trim();
+
+            const email =
+                document.getElementById("bookingEmail").value.trim();
+
+            const phone =
+                document.getElementById("bookingPhone").value.trim();
+
+            const moveInDate =
+                document.getElementById("moveInDate").value;
+
+            const stayDuration =
+                document.getElementById("stayDuration").value;
+
+            const numberOfPeople =
+                document.getElementById("numberOfPeople").value;
+
+            const requirements =
+                document.getElementById("bookingRequirements").value.trim();
+
+            const bookingResult =
+                document.getElementById("bookingResult");
+
+
+            if (name === "") {
+
+                bookingResult.textContent =
+                    "Please enter your full name.";
+
+                return;
+
+            }
+
+
+            if (email === "" || !email.includes("@")) {
+
+                bookingResult.textContent =
+                    "Please enter a valid email address.";
+
+                return;
+
+            }
+
+
+            if (phone === "") {
+
+                bookingResult.textContent =
+                    "Please enter your phone number.";
+
+                return;
+
+            }
+
+
+            if (moveInDate === "") {
+
+                bookingResult.textContent =
+                    "Please select your move-in date.";
+
+                return;
+
+            }
+
+
+            if (stayDuration === "") {
+
+                bookingResult.textContent =
+                    "Please select your stay duration.";
+
+                return;
+
+            }
+
+
+            if (numberOfPeople === "") {
+
+                bookingResult.textContent =
+                    "Please enter number of people.";
+
+                return;
+
+            }
+
+
+            bookingResult.textContent =
+                "Booking request submitted successfully!";
+
+        });
+
+    </script>
 
 
 </body>

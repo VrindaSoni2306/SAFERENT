@@ -2081,3 +2081,294 @@ input {
     font-size: 18px;
 
 }
+
+
+
+
+/* =====================================================
+   BOOKING FORM
+===================================================== */
+
+.booking-container {
+
+    width: 1200px;
+    max-width: calc(100% - 40px);
+
+    margin: 30px auto 0;
+
+    background: #ffffff;
+
+    padding: 40px 45px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.booking-container h2 {
+
+    color: #292929;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.booking-container > p {
+
+    color: #777;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* ================= BOOKING INPUT ================= */
+
+.booking-input {
+
+    margin-bottom: 18px;
+
+}
+
+
+.booking-input label {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 8px;
+
+}
+
+
+.booking-input input,
+.booking-input select,
+.booking-input textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+
+}
+
+
+.booking-input input:focus,
+.booking-input select:focus,
+.booking-input textarea:focus {
+
+    border-color: #D63384;
+
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+
+}
+
+
+.booking-input textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+
+/* ================= BOOK PROPERTY BUTTON ================= */
+
+.book-property-btn {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #D63384;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.book-property-btn:hover {
+
+    background: #b92a72;
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* ================= SUBMIT BOOKING ================= */
+
+.submit-booking-btn {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #D63384;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.submit-booking-btn:hover {
+
+    background: #b92a72;
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* ================= CANCEL ================= */
+
+.cancel-booking-btn {
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    margin-top: 10px;
+
+    border: 1px solid #D63384;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #D63384;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.cancel-booking-btn:hover {
+
+    background: #fce4f0;
+
+}
+
+
+
+/* ================= BOOKING RESULT ================= */
+
+#bookingResult {
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #198754;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =====================================================
+   BOOKING RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .booking-container {
+
+        width: calc(100% - 40px);
+
+        padding: 30px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .booking-container {
+
+        width: calc(100% - 30px);
+
+        padding: 25px 20px;
+
+    }
+
+
+    .booking-container h2 {
+
+        font-size: 24px;
+
+    }
+
+}
