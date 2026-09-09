@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings - SafeRent</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/my-bookings.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <span>SafeRent</span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="user-dashboard.html" class="nav-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+
+        <a href="favorites.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Favorites</span>
+        </a>
+
+        <a href="my-bookings.html" class="nav-item active">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>My Bookings</span>
+        </a>
+
+        <a href="my-reviews.html" class="nav-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Reviews</span>
+        </a>
+
+        <a href="complaints.html" class="nav-item">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Complaints</span>
+        </a>
+
+        <a href="logout.html" class="nav-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="dashboard-title">
+            <h2>My Bookings</h2>
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search properties...">
+
+            <button type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="notification">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-count">3</span>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-circle">
+                    V
+                </div>
+
+                <div class="user-info">
+
+                    <h4>Vanshdeep</h4>
+                    <span>User</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= BOOKINGS ================= -->
+
+    <section class="bookings-page">
+
+        <div class="bookings-header">
+
+            <div>
+                <h2>My Bookings</h2>
+                <p>View and manage your property bookings</p>
+            </div>
+
+            <div class="booking-count">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>2 Bookings</span>
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING CARD 1 -->
+
+        <div class="booking-card">
+
+            <div class="booking-image">
+
+                <img src="../images/pg1.jpg" alt="SafeRent Property">
+
+                <span class="booking-status confirmed">
+                    Confirmed
+                </span>
+
+            </div>
+
+
+            <div class="booking-details">
+
+                <div class="booking-title">
+
+                    <h3>Sunshine Girls PG</h3>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chandigarh
+                    </span>
+
+                </div>
+
+
+                <div class="booking-info">
+
+                    <div>
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+                            <small>Check-in</small>
+                            <strong>15 Sep 2026</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+                            <small>Check-out</small>
+                            <strong>15 Dec 2026</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-bed"></i>
+
+                        <div>
+                            <small>Room Type</small>
+                            <strong>Single Room</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-bottom">
+
+                    <div class="booking-price">
+                        <small>Monthly Rent</small>
+                        <strong>₹12,000</strong>
+                    </div>
+
+                    <button class="view-booking">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING CARD 2 -->
+
+        <div class="booking-card">
+
+            <div class="booking-image">
+
+                <img src="../images/pg2.jpg" alt="SafeRent Property">
+
+                <span class="booking-status pending">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="booking-details">
+
+                <div class="booking-title">
+
+                    <h3>Green Valley Hostel</h3>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Mohali
+                    </span>
+
+                </div>
+
+
+                <div class="booking-info">
+
+                    <div>
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+                            <small>Check-in</small>
+                            <strong>01 Oct 2026</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+                            <small>Check-out</small>
+                            <strong>01 Jan 2027</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-bed"></i>
+
+                        <div>
+                            <small>Room Type</small>
+                            <strong>Shared Room</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-bottom">
+
+                    <div class="booking-price">
+                        <small>Monthly Rent</small>
+                        <strong>₹8,500</strong>
+                    </div>
+
+                    <button class="view-booking">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMPTY BOOKING SECTION -->
+
+        <div class="no-bookings">
+
+            <i class="fa-solid fa-calendar-xmark"></i>
+
+            <h3>No More Bookings</h3>
+
+            <p>
+                Your upcoming and previous bookings will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

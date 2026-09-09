@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaints - SafeRent</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/complaints.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <span>SafeRent</span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="user-dashboard.html" class="nav-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+
+        <a href="favorites.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Favorites</span>
+        </a>
+
+        <a href="my-bookings.html" class="nav-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>My Bookings</span>
+        </a>
+
+        <a href="my-reviews.html" class="nav-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Reviews</span>
+        </a>
+
+        <a href="complaints.html" class="nav-item active">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Complaints</span>
+        </a>
+
+        <a href="logout.html" class="nav-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="dashboard-title">
+            <h2>Complaints</h2>
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search properties...">
+
+            <button type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="notification">
+                <i class="fa-solid fa-bell"></i>
+                <span class="notification-count">3</span>
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-circle">
+                    V
+                </div>
+
+                <div class="user-info">
+                    <h4>Vanshdeep</h4>
+                    <span>User</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= COMPLAINT PAGE ================= -->
+
+    <section class="complaints-page">
+
+
+        <!-- HEADER -->
+
+        <div class="complaints-header">
+
+            <div>
+                <h2>My Complaints</h2>
+
+                <p>
+                    Report an issue or check your previous complaints
+                </p>
+            </div>
+
+            <div class="complaint-count">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <span>2 Complaints</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= NEW COMPLAINT ================= -->
+
+        <div class="complaint-form-card">
+
+            <div class="section-heading">
+
+                <h2>Submit a Complaint</h2>
+
+                <p>
+                    Tell us about your issue and our team will review it.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>Complaint Type</label>
+
+                        <select required>
+
+                            <option value="">
+                                Select Complaint Type
+                            </option>
+
+                            <option>
+                                Property Issue
+                            </option>
+
+                            <option>
+                                Owner Issue
+                            </option>
+
+                            <option>
+                                Payment Issue
+                            </option>
+
+                            <option>
+                                Safety Issue
+                            </option>
+
+                            <option>
+                                Booking Issue
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Related Property</label>
+
+                        <select required>
+
+                            <option value="">
+                                Select Property
+                            </option>
+
+                            <option>
+                                Sunshine Girls PG
+                            </option>
+
+                            <option>
+                                Green Valley Hostel
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Complaint Subject</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter complaint subject"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Complaint Description</label>
+
+                    <textarea
+                        rows="5"
+                        placeholder="Describe your complaint in detail..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-complaint">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Complaint
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ================= PREVIOUS COMPLAINTS ================= -->
+
+        <div class="previous-complaints">
+
+            <div class="section-heading">
+
+                <h2>Previous Complaints</h2>
+
+                <p>
+                    Track the status of your submitted complaints.
+                </p>
+
+            </div>
+
+
+            <!-- COMPLAINT 1 -->
+
+            <div class="complaint-card">
+
+                <div class="complaint-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="complaint-details">
+
+                    <div class="complaint-title">
+
+                        <h3>Safety Issue</h3>
+
+                        <span class="status resolved">
+                            Resolved
+                        </span>
+
+                    </div>
+
+                    <p class="property-name">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Sunshine Girls PG
+
+                    </p>
+
+                    <p>
+                        Reported an issue regarding the security
+                        arrangements at the property.
+                    </p>
+
+                    <span class="complaint-date">
+                        Submitted on 12 Aug 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPLAINT 2 -->
+
+            <div class="complaint-card">
+
+                <div class="complaint-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div class="complaint-details">
+
+                    <div class="complaint-title">
+
+                        <h3>Property Issue</h3>
+
+                        <span class="status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+                    <p class="property-name">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Green Valley Hostel
+
+                    </p>
+
+                    <p>
+                        Reported maintenance issues inside the room.
+                    </p>
+
+                    <span class="complaint-date">
+                        Submitted on 28 Aug 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

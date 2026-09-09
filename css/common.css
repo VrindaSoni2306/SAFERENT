@@ -1,7 +1,12 @@
-/* 
-    COMMON CSS
-   Sidebar + Topbar + Common Theme
- */
+/* =====================================================
+   SAFERENT COMMON CSS
+   Used by Dashboard / Profile / Favorites / Other Pages
+   ===================================================== */
+
+
+/* =====================================================
+   GLOBAL RESET
+   ===================================================== */
 
 * {
     margin: 0;
@@ -9,237 +14,505 @@
     box-sizing: border-box;
 }
 
+
+/* =====================================================
+   BODY
+   ===================================================== */
+
 body {
     font-family: Georgia, "Times New Roman", serif;
+
     background: #f5f7fb;
-    color: #222;
+
+    color: #1f2937;
+
+    overflow-x: hidden;
 }
 
 
-/* 
+/* =====================================================
    SIDEBAR
- */
+   ===================================================== */
 
 .sidebar {
     position: fixed;
-    left: 0;
-    top: 0;
 
-    width: 320px;
+    top: 0;
+    left: 0;
+
+    width: 335px;
     height: 100vh;
 
     background: #ffffff;
 
-    padding: 65px 25px;
+    padding: 42px 24px;
 
-    border-right: 1px solid #eeeeee;
+    z-index: 1000;
 
-    z-index: 100;
+    overflow: hidden;
 }
+
+
+/* =====================================================
+   SAFERENT LOGO
+   Works with both <h1> and <span>
+   ===================================================== */
 
 .logo {
-    text-align: center;
-    margin-bottom: 90px;
-}
+    width: 100%;
 
-.logo h1 {
-    color: #d63384;
-    font-size: 42px;
-    font-weight: bold;
-}
+    height: 60px;
 
-
-/* 
-   SIDEBAR NAVIGATION
-*/
-
-.sidebar-nav {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.nav-item {
-    display: flex;
     align-items: center;
 
-    gap: 18px;
+    padding-left: 16px;
 
-    padding: 18px 20px;
+    margin-bottom: 82px;
 
-    text-decoration: none;
+    color: #D63384;
 
-    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 20px;
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+}
+
+
+/* Dashboard / Profile use h1 */
+
+.logo h1 {
+    margin: 0;
+
+    padding: 0;
+
+    color: #D63384;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* Favorites uses span */
+
+.logo span {
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #D63384;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* If icon is present */
+
+.logo i {
+    display: none;
+}
+
+
+/* =====================================================
+   SIDEBAR NAVIGATION
+   ===================================================== */
+
+.sidebar-nav {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =====================================================
+   NAV ITEM
+   ===================================================== */
+
+.nav-item {
+    width: 100%;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 22px;
 
     border-radius: 12px;
 
-    transition: 0.2s;
+    text-decoration: none;
+
+    color: #202020;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    transition: all 0.2s ease;
 }
+
+
+/* =====================================================
+   NAV ICON
+   ===================================================== */
 
 .nav-item i {
-    width: 22px;
-    font-size: 20px;
+    width: 42px;
+
+    min-width: 42px;
+
+    font-size: 21px;
+
+    color: #202020;
+
+    text-align: left;
 }
 
-.nav-item:hover {
-    background: #fce4f0;
-    color: #d63384;
+
+/* =====================================================
+   NAV TEXT
+   ===================================================== */
+
+.nav-item span {
+    margin-left: 0;
 }
+
+
+/* =====================================================
+   ACTIVE NAV
+   ===================================================== */
 
 .nav-item.active {
-    background: #d63384;
+    background: #D63384;
+
     color: #ffffff;
 }
 
-.nav-item.logout {
-    margin-top: 10px;
+
+.nav-item.active i {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   NAV HOVER
+   ===================================================== */
+
+.nav-item:hover {
+    background: #fce5f0;
+
+    color: #D63384;
+}
+
+
+.nav-item:hover i {
+    color: #D63384;
+}
+
+
+/* Keep active pink on hover */
+
+.nav-item.active:hover {
+    background: #D63384;
+
+    color: #ffffff;
+}
+
+
+.nav-item.active:hover i {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LOGOUT
+   ===================================================== */
+
+.logout {
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    width: calc(100% - 335px);
+
+    margin-left: 335px;
+
+    min-height: 100vh;
+
+    padding: 32px 34px 50px;
+}
+
+
+/* =====================================================
+   TOPBAR
+   ===================================================== */
+
+.topbar {
+    width: 100%;
+
+    min-height: 135px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    margin-bottom: 36px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+
+.dashboard-title {
+    margin: 0;
+
+    padding: 0;
+
+    color: #202020;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 46px;
+
+    font-weight: bold;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
 }
 
 
 /*
-   MAIN CONTENT
- */
+   Dashboard/Profile have:
 
-.main-content {
-    margin-left: 320px;
+   <div class="dashboard-title">
+       <h2>...</h2>
+   </div>
 
-    min-height: 100vh;
+   So remove default h2 margin.
+*/
 
-    padding: 30px;
-}
+.dashboard-title h1,
+.dashboard-title h2,
+.dashboard-title h3 {
+    margin: 0;
 
+    padding: 0;
 
-/* 
-   TOPBAR
- */
+    font-family: Georgia, "Times New Roman", serif;
 
-.topbar {
-    min-height: 125px;
+    color: #202020;
 
-    background: #ffffff;
+    font-size: inherit;
 
-    border-radius: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding: 25px 35px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-
-/* 
-   PAGE TITLE
- */
-
-.dashboard-title {
-    min-width: 245px;
-}
-
-.dashboard-title h2 {
-    font-size: 42px;
     font-weight: bold;
+
+    line-height: 1.1;
 }
 
 
-/* 
-   SEARCH
- */
-
-.search-box {
-    flex: 1;
-
-    display: flex;
-
-    height: 55px;
-}
-
-.search-box input {
-    width: 100%;
-
-    padding: 0 18px;
-
-    font-size: 16px;
-
-    border: 1px solid #dddddd;
-
-    border-right: none;
-
-    border-radius: 10px 0 0 10px;
-
-    outline: none;
-}
-
-.search-box input:focus {
-    border-color: #d63384;
-}
-
-.search-box button {
-    width: 58px;
-
-    border: none;
-
-    background: #d63384;
-
-    color: #ffffff;
-
-    font-size: 18px;
-
-    border-radius: 0 10px 10px 0;
-
-    cursor: pointer;
-}
-
-
-/* 
+/* =====================================================
    TOPBAR RIGHT
- */
+   ===================================================== */
 
 .topbar-right {
     display: flex;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
+
+    min-width: 0;
+
+    flex-shrink: 1;
 }
 
 
-/* 
-   NOTIFICATION
- */
+/* =====================================================
+   SEARCH BOX
+   ===================================================== */
 
-.notification {
-    position: relative;
+.search-box {
+    width: 525px;
 
-    font-size: 24px;
+    max-width: 525px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    flex-shrink: 1;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
 }
 
-.notification-count {
-    position: absolute;
 
-    top: -12px;
-    right: -12px;
+/* SEARCH INPUT */
 
-    width: 22px;
-    height: 22px;
+.search-box input {
+    flex: 1;
 
-    background: red;
+    min-width: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0 18px;
+
+    border: none;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #555555;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+}
+
+
+/* PLACEHOLDER */
+
+.search-box input::placeholder {
+    color: #777777;
+}
+
+
+/* SEARCH BUTTON */
+
+.search-box button {
+    width: 55px;
+
+    min-width: 55px;
+
+    height: 100%;
+
+    border: none;
+
+    background: #D63384;
 
     color: #ffffff;
 
-    border-radius: 50%;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   NOTIFICATION
+   ===================================================== */
+
+.notification {
+    position: relative;
 
     display: flex;
 
     align-items: center;
 
     justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #202020;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   NOTIFICATION COUNT
+   ===================================================== */
+
+.notification-count {
+    position: absolute;
+
+    top: -13px;
+
+    right: -11px;
+
+    min-width: 23px;
+
+    height: 23px;
+
+    padding: 0 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ff0000;
+
+    color: #ffffff;
+
+    border-radius: 50%;
 
     font-family: Arial, sans-serif;
 
@@ -249,9 +522,9 @@ body {
 }
 
 
-/* 
+/* =====================================================
    USER PROFILE
- */
+   ===================================================== */
 
 .user-profile {
     display: flex;
@@ -259,15 +532,25 @@ body {
     align-items: center;
 
     gap: 15px;
+
+    flex-shrink: 0;
 }
 
+
+/* =====================================================
+   PROFILE CIRCLE
+   ===================================================== */
+
 .profile-circle {
-    width: 54px;
-    height: 54px;
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
 
     border-radius: 50%;
 
-    background: #d63384;
+    background: #D63384;
 
     color: #ffffff;
 
@@ -277,19 +560,440 @@ body {
 
     justify-content: center;
 
-    font-size: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
 
     font-weight: bold;
 }
 
-.user-info h4 {
-    font-size: 18px;
 
-    margin-bottom: 4px;
+/* =====================================================
+   USER INFORMATION
+   ===================================================== */
+
+.user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 120px;
 }
 
-.user-info span {
-    color: #777777;
 
-    font-size: 16px;
+/* Dashboard/Profile use h4 */
+
+.user-info h4 {
+    margin: 0;
+
+    padding: 0;
+
+    color: #111111;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* Favorites uses strong */
+
+.user-info strong {
+    margin: 0;
+
+    padding: 0;
+
+    color: #111111;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+.user-info span {
+    margin: 0;
+
+    padding: 0;
+
+    color: #555555;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1200px
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 280px;
+
+        padding: 42px 20px;
+    }
+
+
+    .main-content {
+        width: calc(100% - 280px);
+
+        margin-left: 280px;
+    }
+
+
+    .logo {
+        padding-left: 10px;
+
+        font-size: 38px;
+    }
+
+
+    .logo h1,
+    .logo span {
+        font-size: 38px;
+    }
+
+
+    .topbar {
+        padding: 0 28px;
+
+        gap: 18px;
+    }
+
+
+    .dashboard-title {
+        font-size: 38px;
+    }
+
+
+    .search-box {
+        width: 400px;
+
+        max-width: 400px;
+    }
+
+
+    .topbar-right {
+        gap: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1000px
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 240px;
+
+        padding: 35px 15px;
+    }
+
+
+    .main-content {
+        width: calc(100% - 240px);
+
+        margin-left: 240px;
+    }
+
+
+    .logo {
+        padding-left: 8px;
+
+        font-size: 34px;
+    }
+
+
+    .logo h1,
+    .logo span {
+        font-size: 34px;
+    }
+
+
+    .nav-item {
+        height: 58px;
+
+        padding: 0 16px;
+
+        font-size: 18px;
+    }
+
+
+    .nav-item i {
+        width: 36px;
+
+        min-width: 36px;
+
+        font-size: 19px;
+    }
+
+
+    .topbar {
+        padding: 0 22px;
+
+        gap: 15px;
+    }
+
+
+    .dashboard-title {
+        font-size: 32px;
+    }
+
+
+    .search-box {
+        width: 280px;
+
+        max-width: 280px;
+    }
+
+
+    .topbar-right {
+        gap: 15px;
+    }
+
+
+    .user-info {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 750px
+   ===================================================== */
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 20px;
+
+        overflow: visible;
+    }
+
+
+    .logo {
+        width: 100%;
+
+        height: 55px;
+
+        justify-content: center;
+
+        padding-left: 0;
+
+        margin-bottom: 25px;
+
+        font-size: 36px;
+    }
+
+
+    .logo h1,
+    .logo span {
+        font-size: 36px;
+    }
+
+
+    .sidebar-nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+
+    .nav-item {
+        width: auto;
+
+        height: 50px;
+
+        padding: 0 14px;
+
+        font-size: 16px;
+    }
+
+
+    .nav-item i {
+        width: auto;
+
+        min-width: auto;
+
+        margin-right: 7px;
+    }
+
+
+    .main-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+
+    .topbar {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .dashboard-title {
+        font-size: 32px;
+    }
+
+
+    .topbar-right {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .search-box {
+        width: 100%;
+
+        max-width: none;
+
+        flex: 1;
+    }
+
+
+    .user-info {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 500px
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .sidebar {
+        padding: 15px;
+    }
+
+
+    .logo {
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .logo h1,
+    .logo span {
+        font-size: 32px;
+    }
+
+
+    .sidebar-nav {
+        gap: 5px;
+    }
+
+
+    .nav-item {
+        height: 45px;
+
+        padding: 0 10px;
+
+        font-size: 14px;
+    }
+
+
+    .nav-item i {
+        font-size: 15px;
+    }
+
+
+    .main-content {
+        padding: 15px;
+    }
+
+
+    .dashboard-title {
+        font-size: 27px;
+    }
+
+
+    .topbar {
+        padding: 18px;
+
+        border-radius: 15px;
+
+        gap: 18px;
+    }
+
+
+    .topbar-right {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    .search-box {
+        width: 100%;
+
+        max-width: none;
+
+        order: 1;
+    }
+
+
+    .notification {
+        order: 2;
+    }
+
+
+    .user-profile {
+        order: 3;
+    }
+
+
+    .profile-circle {
+        width: 50px;
+
+        height: 50px;
+
+        min-width: 50px;
+
+        font-size: 21px;
+    }
+
 }
