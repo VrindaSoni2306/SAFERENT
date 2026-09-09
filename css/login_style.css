@@ -746,3 +746,1338 @@ input {
     }
 
 }
+
+
+/* =====================================================
+   PROPERTIES PAGE
+===================================================== */
+
+.properties-header {
+
+    text-align: center;
+
+    padding: 70px 20px 45px;
+
+}
+
+.properties-header h1 {
+
+    font-size: 42px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+
+}
+
+.properties-header p {
+
+    font-size: 18px;
+
+    color: #777;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================================
+   SEARCH BAR
+===================================================== */
+
+.property-search {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    max-width: 810px;
+
+    margin: 0 auto;
+
+}
+
+.property-search input {
+
+    width: 100%;
+
+    padding: 17px 22px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px 0 0 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+
+}
+
+.property-search input:focus {
+
+    border-color: #D63384;
+
+}
+
+.property-search button {
+
+    padding: 17px 35px;
+
+    border: none;
+
+    background: #D63384;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+
+}
+
+.property-search button:hover {
+
+    background: #b92a72;
+
+}
+
+
+/* =====================================================
+   PROPERTY SECTION
+===================================================== */
+
+.properties-section {
+
+    padding: 20px 70px 70px;
+
+}
+
+.properties-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =====================================================
+   PROPERTY CARD
+===================================================== */
+
+.property-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+}
+
+.property-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+.property-card > img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+.property-content {
+
+    padding: 20px;
+
+}
+
+
+/* =====================================================
+   PROPERTY TOP
+===================================================== */
+
+.property-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+}
+
+.property-type {
+
+    background: #fce4f0;
+
+    color: #D63384;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+.verified {
+
+    color: #198754;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+/* =====================================================
+   PROPERTY TITLE
+===================================================== */
+
+.property-content h2 {
+
+    font-size: 20px;
+
+    color: #333;
+
+    margin-bottom: 8px;
+
+}
+
+.location {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =====================================================
+   PROPERTY INFO
+===================================================== */
+
+.property-info {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.property-info span {
+
+    color: #666;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   SAFETY SCORE
+===================================================== */
+
+.safety-score {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 17px 0;
+
+    padding: 10px 12px;
+
+    background: #f8f9fc;
+
+    border-radius: 7px;
+
+}
+
+.safety-score span {
+
+    font-size: 13px;
+
+    color: #555;
+
+}
+
+.safety-score strong {
+
+    color: #D63384;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   PROPERTY BOTTOM
+===================================================== */
+
+.property-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.rent strong {
+
+    font-size: 20px;
+
+    color: #333;
+
+}
+
+.rent span {
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+.view-btn {
+
+    border: none;
+
+    background: #D63384;
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+.view-btn:hover {
+
+    background: #b92a72;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .properties-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .properties-section {
+
+        padding: 20px;
+
+    }
+
+    .properties-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .properties-header h1 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   PROPERTY DETAILS PAGE
+===================================================== */
+
+.property-details-section {
+
+    padding: 45px 70px 70px;
+
+}
+
+
+
+.property-details-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-btn {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #D63384;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+}
+
+
+
+.back-btn:hover {
+
+    color: #b92a72;
+
+}
+
+
+
+/* =====================================================
+   DETAILS CARD
+===================================================== */
+
+.property-details-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+
+    grid-template-columns: 48% 52%;
+
+}
+
+
+
+/* =====================================================
+   DETAILS IMAGE
+===================================================== */
+
+.property-details-image {
+
+    min-height: 650px;
+
+}
+
+
+
+.property-details-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+/* =====================================================
+   DETAILS CONTENT
+===================================================== */
+
+.property-details-content {
+
+    padding: 40px;
+
+}
+
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.details-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.property-details-content h1 {
+
+    font-size: 34px;
+
+    color: #333;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.details-location {
+
+    color: #777;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.details-price {
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.details-price strong {
+
+    font-size: 30px;
+
+    color: #D63384;
+
+}
+
+
+
+.details-price span {
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+
+
+/* =====================================================
+   PROPERTY INFO
+===================================================== */
+
+.details-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #eee;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+
+.details-info div {
+
+    text-align: center;
+
+}
+
+
+
+.details-info strong {
+
+    display: block;
+
+    font-size: 20px;
+
+    color: #333;
+
+}
+
+
+
+.details-info span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #777;
+
+}
+
+
+
+/* =====================================================
+   SAFETY
+===================================================== */
+
+.details-safety {
+
+    background: #f8f9fc;
+
+    border-radius: 8px;
+
+    padding: 16px;
+
+    margin-top: 22px;
+
+}
+
+
+
+.details-safety div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+.details-safety span {
+
+    color: #555;
+
+    font-size: 14px;
+
+}
+
+
+
+.details-safety strong {
+
+    color: #D63384;
+
+    font-size: 18px;
+
+}
+
+
+
+.details-safety p {
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+
+}
+
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.details-description {
+
+    margin-top: 25px;
+
+}
+
+
+
+.details-description h2,
+.amenities h2 {
+
+    font-size: 19px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.details-description p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =====================================================
+   AMENITIES
+===================================================== */
+
+.amenities {
+
+    margin-top: 25px;
+
+}
+
+
+
+.amenities-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+
+.amenities-list span {
+
+    background: #fce4f0;
+
+    color: #D63384;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.details-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+}
+
+
+
+.details-buttons button {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.contact-owner-btn {
+
+    border: none;
+
+    background: #D63384;
+
+    color: white;
+
+}
+
+
+
+.contact-owner-btn:hover {
+
+    background: #b92a72;
+
+}
+
+
+
+.enquiry-btn {
+
+    border: 1px solid #D63384;
+
+    background: white;
+
+    color: #D63384;
+
+}
+
+
+
+.enquiry-btn:hover {
+
+    background: #fce4f0;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .property-details-section {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .property-details-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .property-details-image {
+
+        min-height: 400px;
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .property-details-content {
+
+        padding: 25px;
+
+    }
+
+
+    .property-details-content h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .details-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .details-buttons {
+
+        flex-direction: column;
+
+    }
+
+}
+
+/* =====================================================
+   PROPERTY DETAILS PAGE
+===================================================== */
+
+.property-details-page {
+    background: #f7f8fc;
+    min-height: calc(100vh - 80px);
+    padding: 25px 0 60px;
+}
+
+
+/* ================= BACK LINK ================= */
+
+.back-link {
+    display: block;
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 30px;
+
+    color: #D63384;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= MAIN CARD ================= */
+
+.property-details-container {
+    width: 1200px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= IMAGE ================= */
+
+.property-image {
+    width: 100%;
+    height: 730px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================= DETAILS CONTENT ================= */
+
+.property-details-content {
+    padding: 45px 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================= TOP ROW ================= */
+
+.details-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* Property type */
+
+.details-top .property-type {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    background: #fde3f0;
+
+    color: #D63384;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* Verified */
+
+.details-top .verified {
+    color: #008f63;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* ================= TITLE ================= */
+
+.property-details-content h1 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    color: #292929;
+
+    margin: 0 0 18px;
+
+    font-weight: 700;
+}
+
+
+/* ================= LOCATION ================= */
+
+.details-location {
+    color: #777;
+
+    font-size: 18px;
+
+    margin: 0 0 32px;
+}
+
+
+/* ================= PRICE ================= */
+
+.details-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    margin-bottom: 35px;
+}
+
+.details-price strong {
+    font-size: 34px;
+
+    color: #D63384;
+
+    font-weight: 700;
+}
+
+.details-price span {
+    font-size: 17px;
+
+    color: #666;
+}
+
+
+/* ================= PROPERTY INFO ================= */
+
+.details-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    padding: 25px 0;
+
+    margin-bottom: 25px;
+}
+
+
+.info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.info-item strong {
+    font-size: 23px;
+
+    color: #292929;
+
+    margin-bottom: 5px;
+}
+
+
+.info-item span {
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+/* ================= SAFETY ================= */
+
+.details-safety {
+    background: #f7f8fc;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.safety-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.safety-top span {
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+.safety-top strong {
+    color: #D63384;
+
+    font-size: 21px;
+}
+
+
+.details-safety p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-property {
+    margin-bottom: 25px;
+}
+
+
+.about-property h2 {
+    color: #292929;
+
+    font-size: 23px;
+
+    margin: 0 0 12px;
+}
+
+
+.about-property p {
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ================= ACTION BUTTON ================= */
+
+.details-actions {
+    margin-top: auto;
+
+    padding-top: 15px;
+}
+
+
+.contact-owner-btn {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #D63384;
+
+    color: white;
+
+    font-family: Poppins, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.contact-owner-btn:hover {
+    background: #b92a72;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .property-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .property-image {
+        height: 450px;
+    }
+
+    .property-details-content {
+        padding: 30px;
+    }
+
+    .property-details-content h1 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .property-details-page {
+        padding-top: 20px;
+    }
+
+    .property-image {
+        height: 320px;
+    }
+
+    .property-details-content {
+        padding: 25px 20px;
+    }
+
+    .property-details-content h1 {
+        font-size: 27px;
+    }
+
+    .details-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .details-top {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .details-price strong {
+        font-size: 29px;
+    }
+
+}
+
+
+
+
+/* =========================
+   NO SEARCH RESULTS
+========================= */
+
+.no-results {
+
+    display: none;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #777;
+
+    font-size: 18px;
+
+}
