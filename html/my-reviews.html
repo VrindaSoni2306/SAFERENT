@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Reviews - SafeRent</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/my-reviews.css">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <span>SafeRent</span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="user-dashboard.html" class="nav-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+
+        <a href="favorites.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Favorites</span>
+        </a>
+
+        <a href="my-bookings.html" class="nav-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>My Bookings</span>
+        </a>
+
+        <a href="my-reviews.html" class="nav-item active">
+            <i class="fa-solid fa-star"></i>
+            <span>Reviews</span>
+        </a>
+
+        <a href="complaints.html" class="nav-item">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Complaints</span>
+        </a>
+
+        <a href="logout.html" class="nav-item logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="dashboard-title">
+            <h2>My Reviews</h2>
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search properties...">
+
+            <button type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="notification">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-count">3</span>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-circle">
+                    V
+                </div>
+
+                <div class="user-info">
+                    <h4>Vanshdeep</h4>
+                    <span>User</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= REVIEWS PAGE ================= -->
+
+    <section class="reviews-page">
+
+        <div class="reviews-header">
+
+            <div>
+                <h2>My Reviews</h2>
+
+                <p>
+                    Reviews and feedback shared by you
+                </p>
+            </div>
+
+            <div class="review-count">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>2 Reviews</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= REVIEW CARD 1 ================= -->
+
+        <div class="review-card">
+
+            <div class="review-property">
+
+                <img src="../images/pg1.jpg"
+                     alt="Sunshine Girls PG">
+
+                <div>
+
+                    <h3>Sunshine Girls PG</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chandigarh
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-content">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <span class="review-date">
+                        20 Aug 2026
+                    </span>
+
+                </div>
+
+                <h4>Very Safe and Comfortable</h4>
+
+                <p>
+                    The property was clean and comfortable.
+                    The security arrangements were also very good.
+                    Overall, I had a great experience staying here.
+                </p>
+
+                <button class="edit-review">
+                    <i class="fa-solid fa-pen"></i>
+                    Edit Review
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= REVIEW CARD 2 ================= -->
+
+        <div class="review-card">
+
+            <div class="review-property">
+
+                <img src="../images/pg2.jpg"
+                     alt="Green Valley Hostel">
+
+                <div>
+
+                    <h3>Green Valley Hostel</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Mohali
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-content">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+
+                    <span class="review-date">
+                        10 Aug 2026
+                    </span>
+
+                </div>
+
+                <h4>Good Experience</h4>
+
+                <p>
+                    The location is good and the rooms are well maintained.
+                    The staff was helpful and friendly.
+                </p>
+
+                <button class="edit-review">
+                    <i class="fa-solid fa-pen"></i>
+                    Edit Review
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= NO REVIEW ================= -->
+
+        <div class="no-reviews">
+
+            <i class="fa-regular fa-star"></i>
+
+            <h3>No More Reviews</h3>
+
+            <p>
+                Your future reviews will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+/* =====================================================
+   FAVORITES PAGE
+   ===================================================== */
+
+
+/* =====================================================
+   FAVORITES HEADER
+   ===================================================== */
+
+.favorites-header {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    min-height: 115px;
+
+    padding: 25px 42px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.035);
+}
+
+.favorites-header h2 {
+    font-size: 32px;
+
+    color: #172033;
+
+    margin-bottom: 7px;
+}
+
+.favorites-header p {
+    font-size: 18px;
+
+    color: #687080;
+}
+
+
+/* FAVORITE COUNT */
+
+.favorite-total {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: #fce9f2;
+
+    color: #d63384;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.favorite-total i {
+    font-size: 18px;
+}
+
+.favorite-total span {
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   PROPERTY CARDS
+   ===================================================== */
+
+.favorites-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 17px;
+
+    margin-bottom: 22px;
+}
+
+.favorite-card {
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+
+    transition: 0.2s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   PROPERTY IMAGE
+   ===================================================== */
+
+.favorite-image {
+    position: relative;
+
+    height: 132px;
+
+    overflow: hidden;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   HEART
+   ===================================================== */
+
+.heart-button {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #d63384;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    transition: 0.2s;
+}
+
+.heart-button:hover {
+    background: #d63384;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   VERIFIED
+   ===================================================== */
+
+.verified-badge {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    background: #d63384;
+
+    color: #ffffff;
+
+    padding: 6px 13px;
+
+    border-radius: 0 15px 0 0;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.verified-badge i {
+    margin-right: 4px;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
+
+.favorite-content {
+    padding: 13px 18px 17px;
+}
+
+.favorite-content h3 {
+    font-size: 19px;
+
+    color: #172033;
+
+    margin-bottom: 8px;
+}
+
+
+/* LOCATION */
+
+.location {
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 9px;
+}
+
+.location i {
+    color: #a74269;
+
+    margin-right: 6px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+    color: #687080;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    min-height: 38px;
+
+    margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   DETAILS
+   ===================================================== */
+
+.favorite-details {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+.favorite-details span {
+    background: #fcebf3;
+
+    color: #687080;
+
+    border-radius: 20px;
+
+    padding: 7px 13px;
+
+    font-size: 13px;
+}
+
+.favorite-details i {
+    color: #d63384;
+
+    margin-right: 6px;
+}
+
+
+/* =====================================================
+   BOTTOM
+   ===================================================== */
+
+.favorite-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.price {
+    color: #d63384;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+.price small {
+    color: #667085;
+
+    font-size: 13px;
+
+    font-weight: normal;
+}
+
+
+/* VIEW BUTTON */
+
+.view-button {
+    text-decoration: none;
+
+    background: #fce9f2;
+
+    color: #d63384;
+
+    padding: 10px 14px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.view-button:hover {
+    background: #d63384;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   NO FAVORITES
+   ===================================================== */
+
+.no-favorites {
+    background: #ffffff;
+
+    min-height: 195px;
+
+    border-radius: 20px;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+}
+
+.no-favorites i {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fce9f2;
+
+    color: #d63384;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.no-favorites h3 {
+    color: #172033;
+
+    font-size: 19px;
+
+    margin-bottom: 7px;
+}
+
+.no-favorites p {
+    color: #687080;
+
+    font-size: 14px;
+
+    margin-bottom: 14px;
+}
+
+.no-favorites a {
+    text-decoration: none;
+
+    background: #d63384;
+
+    color: #ffffff;
+
+    padding: 9px 20px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .favorites-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .favorites-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .favorites-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .favorites-header h2 {
+        font-size: 26px;
+    }
+
+    .favorite-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .view-button {
+        width: 100%;
+
+        text-align: center;
+    }
+}

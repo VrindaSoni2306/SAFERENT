@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Favorites - SafeRent</title>
+
+
+    <!-- COMMON CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- FAVORITES CSS -->
+    <link rel="stylesheet" href="../css/favorites.css">
+
+ 
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <span>SafeRent</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a href="user-dashboard.html" class="nav-item">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="profile.html" class="nav-item">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+
+            <a href="favorites.html" class="nav-item active">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span>Favorites</span>
+
+            </a>
+
+
+            <a href="my-bookings.html" class="nav-item">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>My Bookings</span>
+
+            </a>
+
+
+            <a href="my-reviews.html" class="nav-item">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>Reviews</span>
+
+            </a>
+
+
+            <a href="complaints.html" class="nav-item">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <span>Complaints</span>
+
+            </a>
+
+
+            <a href="login.html" class="nav-item logout">
+
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+
+            <h1 class="dashboard-title">
+                My Favorites
+            </h1>
+
+
+            <div class="topbar-right">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search properties..."
+                    >
+
+                    <button>
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- NOTIFICATION -->
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </div>
+
+
+                <!-- USER -->
+
+                <div class="user-profile">
+
+                    <div class="profile-circle">
+                        V
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong>
+                            Vanshdeep
+                        </strong>
+
+                        <span>
+                            User
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             FAVORITES HEADER
+             ================================================= -->
+
+        <section class="favorites-header">
+
+
+            <div>
+
+                <h2>
+                    Saved Properties
+                </h2>
+
+                <p>
+                    Properties you have saved for later.
+                </p>
+
+            </div>
+
+
+            <div class="favorite-total">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span id="favoriteCount">
+                    3
+                </span>
+
+                Favorites
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROPERTY CARDS
+             ================================================= -->
+
+        <section class="favorites-container">
+
+
+            <!-- CARD 1 -->
+
+            <div class="favorite-card" id="card1">
+
+
+                <div class="favorite-image">
+
+                    <img
+                        src="../images/pg1.jpg"
+                        alt="Sunrise Girls PG"
+                    >
+
+
+                    <button
+                        class="heart-button"
+                        onclick="removeFavorite1()"
+                    >
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </button>
+
+
+                    <span class="verified-badge">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="favorite-content">
+
+
+                    <h3>
+                        Sunrise Girls PG
+                    </h3>
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Sector 15, Chandigarh
+
+                    </p>
+
+
+                    <p class="description">
+
+                        Safe and comfortable accommodation
+                        with modern facilities.
+
+                    </p>
+
+
+                    <div class="favorite-details">
+
+                        <span>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            Single Room
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            CCTV
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="favorite-bottom">
+
+
+                        <div class="price">
+
+                            ₹8,500
+
+                            <small>
+                                /month
+                            </small>
+
+                        </div>
+
+
+                        <a href="#" class="view-button">
+
+                            View Property
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="favorite-card" id="card2">
+
+
+                <div class="favorite-image">
+
+                    <img
+                        src="../images/pg2.jpg"
+                        alt="Green Valley Hostel"
+                    >
+
+
+                    <button
+                        class="heart-button"
+                        onclick="removeFavorite2()"
+                    >
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </button>
+
+
+                    <span class="verified-badge">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="favorite-content">
+
+
+                    <h3>
+                        Green Valley Hostel
+                    </h3>
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Sector 22, Chandigarh
+
+                    </p>
+
+
+                    <p class="description">
+
+                        Secure hostel with furnished rooms
+                        and excellent facilities.
+
+                    </p>
+
+
+                    <div class="favorite-details">
+
+                        <span>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            Double Room
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="fa-solid fa-wifi"></i>
+
+                            Wi-Fi
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="favorite-bottom">
+
+
+                        <div class="price">
+
+                            ₹7,500
+
+                            <small>
+                                /month
+                            </small>
+
+                        </div>
+
+
+                        <a href="#" class="view-button">
+
+                            View Property
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="favorite-card" id="card3">
+
+
+                <div class="favorite-image">
+
+                    <img
+                        src="../images/pg3.jpg"
+                        alt="Rose Residency"
+                    >
+
+
+                    <button
+                        class="heart-button"
+                        onclick="removeFavorite3()"
+                    >
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </button>
+
+
+                    <span class="verified-badge">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="favorite-content">
+
+
+                    <h3>
+                        Rose Residency
+                    </h3>
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Sector 34, Chandigarh
+
+                    </p>
+
+
+                    <p class="description">
+
+                        Comfortable women's accommodation
+                        with excellent security.
+
+                    </p>
+
+
+                    <div class="favorite-details">
+
+                        <span>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            Single Room
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            Security
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="favorite-bottom">
+
+
+                        <div class="price">
+
+                            ₹9,000
+
+                            <small>
+                                /month
+                            </small>
+
+                        </div>
+
+
+                        <a href="#" class="view-button">
+
+                            View Property
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NO FAVORITES
+             ================================================= -->
+
+        <section class="no-favorites" id="noFavorites">
+
+
+            <i class="fa-regular fa-heart"></i>
+
+
+            <h3>
+                No Favorite Properties
+            </h3>
+
+
+            <p>
+                You haven't saved any properties yet.
+            </p>
+
+
+            <a href="user-dashboard.html">
+
+                Explore Properties
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/script1.js"></script>
+
+
+</body>
+
+</html>
