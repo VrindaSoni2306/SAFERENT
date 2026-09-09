@@ -3,23 +3,18 @@
 ===================================================== */
 
 const loginTab = document.getElementById("loginTab");
-
 const registerTab = document.getElementById("registerTab");
 
 const loginForm = document.getElementById("loginForm");
-
 const registerForm = document.getElementById("registerForm");
 
 const formTitle = document.getElementById("formTitle");
-
 const formSubtitle = document.getElementById("formSubtitle");
 
 const successMessage = document.getElementById("successMessage");
-
 const errorMessage = document.getElementById("errorMessage");
 
 const bottomRegister = document.getElementById("bottomRegister");
-
 const bottomLogin = document.getElementById("bottomLogin");
 
 const forgotPassword = document.getElementById("forgotPassword");
@@ -28,67 +23,16 @@ const navbarLogin = document.getElementById("navbarLogin");
 
 
 /* =====================================================
-   SHOW LOGIN FORM
-===================================================== */
-
-function showLogin() {
-
-    loginForm.classList.remove("hidden");
-
-    registerForm.classList.add("hidden");
-
-    loginTab.classList.add("active");
-
-    registerTab.classList.remove("active");
-
-    formTitle.innerHTML = "Welcome Back 👋";
-
-    formSubtitle.innerHTML =
-        "Login to continue to SafeRent";
-
-    clearMessages();
-
-}
-
-
-/* =====================================================
-   SHOW REGISTER FORM
-===================================================== */
-
-function showRegister() {
-
-    loginForm.classList.add("hidden");
-
-    registerForm.classList.remove("hidden");
-
-    registerTab.classList.add("active");
-
-    loginTab.classList.remove("active");
-
-    formTitle.innerHTML = "Create Account ✨";
-
-    formSubtitle.innerHTML =
-        "Register to start using SafeRent";
-
-    clearMessages();
-
-}
-
-
-/* =====================================================
-   CLEAR SUCCESS / ERROR MESSAGES
+   CLEAR MESSAGES
 ===================================================== */
 
 function clearMessages() {
 
     successMessage.style.display = "none";
-
-    successMessage.innerHTML = "";
+    successMessage.textContent = "";
 
     errorMessage.style.display = "none";
-
-    errorMessage.innerHTML = "";
-
+    errorMessage.textContent = "";
 }
 
 
@@ -96,16 +40,13 @@ function clearMessages() {
    SHOW SUCCESS MESSAGE
 ===================================================== */
 
-function showSuccess(message) {
+function showSuccess(text) {
 
     errorMessage.style.display = "none";
+    errorMessage.textContent = "";
 
-    errorMessage.innerHTML = "";
-
-    successMessage.innerHTML = message;
-
+    successMessage.textContent = text;
     successMessage.style.display = "block";
-
 }
 
 
@@ -113,21 +54,60 @@ function showSuccess(message) {
    SHOW ERROR MESSAGE
 ===================================================== */
 
-function showError(message) {
+function showError(text) {
 
     successMessage.style.display = "none";
+    successMessage.textContent = "";
 
-    successMessage.innerHTML = "";
-
-    errorMessage.innerHTML = message;
-
+    errorMessage.textContent = text;
     errorMessage.style.display = "block";
-
 }
 
 
 /* =====================================================
-   LOGIN TAB CLICK
+   SHOW LOGIN
+===================================================== */
+
+function showLogin() {
+
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
+
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+
+    formTitle.textContent = "Welcome Back 👋";
+
+    formSubtitle.textContent =
+        "Login to continue to SafeRent";
+
+    clearMessages();
+}
+
+
+/* =====================================================
+   SHOW REGISTER
+===================================================== */
+
+function showRegister() {
+
+    loginForm.classList.add("hidden");
+    registerForm.classList.remove("hidden");
+
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+
+    formTitle.textContent = "Create Account ✨";
+
+    formSubtitle.textContent =
+        "Register to start using SafeRent";
+
+    clearMessages();
+}
+
+
+/* =====================================================
+   LOGIN TAB
 ===================================================== */
 
 loginTab.addEventListener("click", function () {
@@ -138,7 +118,7 @@ loginTab.addEventListener("click", function () {
 
 
 /* =====================================================
-   REGISTER TAB CLICK
+   REGISTER TAB
 ===================================================== */
 
 registerTab.addEventListener("click", function () {
@@ -149,7 +129,7 @@ registerTab.addEventListener("click", function () {
 
 
 /* =====================================================
-   BOTTOM REGISTER CLICK
+   BOTTOM REGISTER
 ===================================================== */
 
 bottomRegister.addEventListener("click", function (event) {
@@ -162,7 +142,7 @@ bottomRegister.addEventListener("click", function (event) {
 
 
 /* =====================================================
-   BOTTOM LOGIN CLICK
+   BOTTOM LOGIN
 ===================================================== */
 
 bottomLogin.addEventListener("click", function (event) {
@@ -175,7 +155,7 @@ bottomLogin.addEventListener("click", function (event) {
 
 
 /* =====================================================
-   NAVBAR LOGIN CLICK
+   NAVBAR LOGIN
 ===================================================== */
 
 navbarLogin.addEventListener("click", function (event) {
@@ -188,65 +168,72 @@ navbarLogin.addEventListener("click", function (event) {
 
 
 /* =====================================================
-   LOGIN FORM SUBMIT
+   LOGIN FORM
 ===================================================== */
 
 loginForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-
     const email =
         document.getElementById("loginEmail").value.trim();
 
     const password =
-        document.getElementById("loginPassword").value.trim();
+        document.getElementById("loginPassword").value;
 
 
-    /* EMPTY FIELD CHECK */
+    /* EMPTY FIELD */
 
     if (email === "" || password === "") {
 
-        showError("Please enter email and password.");
+        showError(
+            "Please enter email and password."
+        );
 
         return;
-
     }
 
 
-    /* EMAIL CHECK */
+    /* EMAIL VALIDATION */
 
     if (!email.includes("@")) {
 
-        showError("Please enter a valid email address.");
+        showError(
+            "Please enter a valid email address."
+        );
 
         return;
-
     }
 
 
-    /* SUCCESS */
+    /* PASSWORD VALIDATION */
+
+    if (password.length < 6) {
+
+        showError(
+            "Password must contain at least 6 characters."
+        );
+
+        return;
+    }
+
+
+    /* LOGIN SUCCESS */
 
     showSuccess(
         "Login successful! Welcome to SafeRent."
     );
 
-
-    /* CLEAR PASSWORD */
-
-    document.getElementById("loginPassword").value = "";
-
 });
 
 
 /* =====================================================
-   REGISTER FORM SUBMIT
+   REGISTER FORM
 ===================================================== */
 
 registerForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
-
 
     const name =
         document.getElementById("registerName").value.trim();
@@ -264,29 +251,51 @@ registerForm.addEventListener("submit", function (event) {
         document.getElementById("terms").checked;
 
 
-    /* NAME CHECK */
+    /* NAME VALIDATION */
 
     if (name === "") {
 
-        showError("Please enter your full name.");
+        showError(
+            "Please enter your full name."
+        );
 
         return;
-
     }
 
 
-    /* EMAIL CHECK */
+    /* EMAIL VALIDATION */
 
-    if (email === "" || !email.includes("@")) {
+    if (email === "") {
 
-        showError("Please enter a valid email address.");
+        showError(
+            "Please enter your email address."
+        );
 
         return;
-
     }
 
 
-    /* PASSWORD LENGTH */
+    if (!email.includes("@")) {
+
+        showError(
+            "Please enter a valid email address."
+        );
+
+        return;
+    }
+
+
+    /* PASSWORD VALIDATION */
+
+    if (password === "") {
+
+        showError(
+            "Please enter a password."
+        );
+
+        return;
+    }
+
 
     if (password.length < 6) {
 
@@ -295,11 +304,20 @@ registerForm.addEventListener("submit", function (event) {
         );
 
         return;
-
     }
 
 
     /* CONFIRM PASSWORD */
+
+    if (confirmPassword === "") {
+
+        showError(
+            "Please confirm your password."
+        );
+
+        return;
+    }
+
 
     if (password !== confirmPassword) {
 
@@ -308,7 +326,6 @@ registerForm.addEventListener("submit", function (event) {
         );
 
         return;
-
     }
 
 
@@ -321,7 +338,6 @@ registerForm.addEventListener("submit", function (event) {
         );
 
         return;
-
     }
 
 
@@ -330,12 +346,6 @@ registerForm.addEventListener("submit", function (event) {
     showSuccess(
         "Registration successful! Welcome to SafeRent."
     );
-
-
-    /* CLEAR FORM */
-
-    registerForm.reset();
-
 
 });
 
@@ -348,7 +358,6 @@ forgotPassword.addEventListener("click", function (event) {
 
     event.preventDefault();
 
-
     const email =
         document.getElementById("loginEmail").value.trim();
 
@@ -360,7 +369,6 @@ forgotPassword.addEventListener("click", function (event) {
         );
 
         return;
-
     }
 
 
@@ -371,7 +379,6 @@ forgotPassword.addEventListener("click", function (event) {
         );
 
         return;
-
     }
 
 
