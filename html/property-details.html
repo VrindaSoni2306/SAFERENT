@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Property Details | SafeRent</title>
+
+
+    <!-- PROPERTY DETAILS CSS -->
+
+    <link rel="stylesheet"
+          href="../css/login_style.css">
+
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SafeRent
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="properties.html">
+                    Properties
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    Contact
+                </a>
+            </li>
+
+
+            <li>
+                <a href="login-register.html">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="property-details-page">
+
+
+        <!-- BACK TO PROPERTIES -->
+
+        <a href="properties.html"
+           class="back-link">
+
+            ← Back to Properties
+
+        </a>
+
+
+
+        <!-- ================= PROPERTY DETAILS CARD ================= -->
+
+        <div class="property-details-container">
+
+
+            <!-- ================= IMAGE ================= -->
+
+            <div class="property-image">
+
+                <img
+                    id="propertyImage"
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80"
+                    alt="Property">
+
+            </div>
+
+
+
+            <!-- ================= DETAILS ================= -->
+
+            <div class="property-details-content">
+
+
+                <!-- TOP ROW -->
+
+                <div class="details-top">
+
+                    <span
+                        class="property-type"
+                        id="propertyType">
+
+                        Apartment
+
+                    </span>
+
+
+                    <span class="verified">
+
+                        ✓ Verified Owner
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- TITLE -->
+
+                <h1 id="propertyTitle">
+
+                    Modern 2 BHK Apartment
+
+                </h1>
+
+
+
+                <!-- LOCATION -->
+
+                <p class="details-location"
+                   id="propertyLocation">
+
+                    📍 Gurgaon, Haryana
+
+                </p>
+
+
+
+                <!-- PRICE -->
+
+                <div class="details-price">
+
+                    <strong id="propertyPrice">
+
+                        ₹25,000
+
+                    </strong>
+
+                    <span>
+                        / month
+                    </span>
+
+                </div>
+
+
+
+                <!-- ================= PROPERTY INFO ================= -->
+
+                <div class="details-info">
+
+
+                    <div class="info-item">
+
+                        <strong id="propertyBeds">
+                            2
+                        </strong>
+
+                        <span>
+                            Bedrooms
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong id="propertyBaths">
+                            2
+                        </strong>
+
+                        <span>
+                            Bathrooms
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong id="propertyArea">
+                            1200 sq.ft
+                        </strong>
+
+                        <span>
+                            Area
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= SAFETY SCORE ================= -->
+
+                <div class="details-safety">
+
+
+                    <div class="safety-top">
+
+                        <span>
+
+                            🛡 Safety Score
+
+                        </span>
+
+
+                        <strong id="propertySafety">
+
+                            9.2/10
+
+                        </strong>
+
+                    </div>
+
+
+                    <p>
+
+                        This property has been reviewed for
+                        location and owner safety.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= ABOUT ================= -->
+
+                <div class="about-property">
+
+                    <h2>
+                        About this property
+                    </h2>
+
+
+                    <p>
+
+                        A modern and comfortable property
+                        located in a well-connected area.
+                        The property is suitable for families
+                        and working professionals and offers
+                        a safe and peaceful living environment.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= ACTION BUTTONS ================= -->
+
+                <div class="details-actions">
+
+
+                    <button
+                        class="contact-owner-btn"
+                        id="contactOwnerBtn">
+
+                        Contact Owner
+
+                    </button>
+
+
+                    <button
+                        class="book-property-btn"
+                        id="bookPropertyBtn">
+
+                        Book Property
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BOOKING FORM ================= -->
+
+        <div class="booking-container"
+             id="bookingContainer"
+             style="display:none;">
+
+
+            <h2>
+                Book This Property
+            </h2>
+
+
+            <p>
+                Please enter your details to send a booking request.
+            </p>
+
+
+
+            <!-- FULL NAME -->
+
+            <div class="booking-input">
+
+                <label for="bookingName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingName"
+                    placeholder="Enter your full name">
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="booking-input">
+
+                <label for="bookingEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="bookingEmail"
+                    placeholder="Enter your email">
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="booking-input">
+
+                <label for="bookingPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingPhone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+
+            <!-- MOVE-IN DATE -->
+
+            <div class="booking-input">
+
+                <label for="moveInDate">
+                    Move-in Date
+                </label>
+
+                <input
+                    type="date"
+                    id="moveInDate">
+
+            </div>
+
+
+
+            <!-- STAY DURATION -->
+
+            <div class="booking-input">
+
+                <label for="stayDuration">
+                    Stay Duration
+                </label>
+
+                <select id="stayDuration">
+
+                    <option value="">
+                        Select duration
+                    </option>
+
+                    <option value="3 Months">
+                        3 Months
+                    </option>
+
+                    <option value="6 Months">
+                        6 Months
+                    </option>
+
+                    <option value="1 Year">
+                        1 Year
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- NUMBER OF PEOPLE -->
+
+            <div class="booking-input">
+
+                <label for="numberOfPeople">
+                    Number of People
+                </label>
+
+                <input
+                    type="number"
+                    id="numberOfPeople"
+                    min="1"
+                    placeholder="Enter number of people">
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="booking-input">
+
+                <label for="bookingRequirements">
+                    Message / Requirements
+                </label>
+
+                <textarea
+                    id="bookingRequirements"
+                    placeholder="Enter any additional requirements..."></textarea>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                class="submit-booking-btn"
+                id="submitBookingBtn">
+
+                Submit Booking Request
+
+            </button>
+
+
+
+            <!-- CANCEL -->
+
+            <button
+                class="cancel-booking-btn"
+                id="cancelBookingBtn">
+
+                Cancel
+
+            </button>
+
+
+
+            <!-- RESULT -->
+
+            <p id="bookingResult"></p>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/property-details.js"></script>
+
+
+    <!-- ================= BOOKING JAVASCRIPT ================= -->
+
+    <script>
+
+        const bookPropertyBtn =
+            document.getElementById("bookPropertyBtn");
+
+        const bookingContainer =
+            document.getElementById("bookingContainer");
+
+        const submitBookingBtn =
+            document.getElementById("submitBookingBtn");
+
+        const cancelBookingBtn =
+            document.getElementById("cancelBookingBtn");
+
+
+        /* OPEN BOOKING FORM */
+
+        bookPropertyBtn.addEventListener("click", function () {
+
+            bookingContainer.style.display = "block";
+
+            bookingContainer.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* CANCEL BOOKING */
+
+        cancelBookingBtn.addEventListener("click", function () {
+
+            bookingContainer.style.display = "none";
+
+        });
+
+
+        /* SUBMIT BOOKING */
+
+        submitBookingBtn.addEventListener("click", function () {
+
+            const name =
+                document.getElementById("bookingName").value.trim();
+
+            const email =
+                document.getElementById("bookingEmail").value.trim();
+
+            const phone =
+                document.getElementById("bookingPhone").value.trim();
+
+            const moveInDate =
+                document.getElementById("moveInDate").value;
+
+            const stayDuration =
+                document.getElementById("stayDuration").value;
+
+            const numberOfPeople =
+                document.getElementById("numberOfPeople").value;
+
+            const requirements =
+                document.getElementById("bookingRequirements").value.trim();
+
+            const bookingResult =
+                document.getElementById("bookingResult");
+
+
+            if (name === "") {
+
+                bookingResult.textContent =
+                    "Please enter your full name.";
+
+                return;
+
+            }
+
+
+            if (email === "" || !email.includes("@")) {
+
+                bookingResult.textContent =
+                    "Please enter a valid email address.";
+
+                return;
+
+            }
+
+
+            if (phone === "") {
+
+                bookingResult.textContent =
+                    "Please enter your phone number.";
+
+                return;
+
+            }
+
+
+            if (moveInDate === "") {
+
+                bookingResult.textContent =
+                    "Please select your move-in date.";
+
+                return;
+
+            }
+
+
+            if (stayDuration === "") {
+
+                bookingResult.textContent =
+                    "Please select your stay duration.";
+
+                return;
+
+            }
+
+
+            if (numberOfPeople === "") {
+
+                bookingResult.textContent =
+                    "Please enter number of people.";
+
+                return;
+
+            }
+
+
+            bookingResult.textContent =
+                "Booking request submitted successfully!";
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

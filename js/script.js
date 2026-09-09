@@ -1,5 +1,5 @@
-console.log("SafeRent loaded");
+const exploreBtn = document.querySelector("#exploreBtn");
 
-document.querySelector("button").addEventListener("click", function () {
-    alert("Properties section coming soon!");
+exploreBtn.addEventListener("click", function () {
+    window.location.href = "properties.html";
 });
