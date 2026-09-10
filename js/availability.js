@@ -13,19 +13,19 @@ function logout() {
 }
 
 
-function searchProperty() {
+function updateAvailability() {
 
-    var search =
-        document.getElementById("searchInput").value;
+    var rooms =
+        prompt("Enter available rooms:");
 
-    if (search == "") {
-
-        alert("Please enter a property name.");
-
-    } else {
+    if (
+        rooms != null &&
+        rooms != ""
+    ) {
 
         alert(
-            "Searching for: " + search
+            "Availability updated successfully!\n" +
+            "Available rooms: " + rooms
         );
     }
 }

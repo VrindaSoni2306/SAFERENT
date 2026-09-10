@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Add Property</title>
+
+    <link rel="stylesheet"
+          href="../css/add-property.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">SafeRent</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn">
+            <span class="icon">▰</span>
+            Dashboard
+        </a>
+
+        <a href="owner-profile.html" class="sidebar-btn">
+            <span class="icon">♟</span>
+            Profile
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn">
+            <span class="icon">♥</span>
+            My Properties
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn active">
+            <span class="icon">＋</span>
+            Add Property
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn">
+            <span class="icon">▣</span>
+            Booking Requests
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            Reviews
+        </a>
+
+        <a href="availability.html" class="sidebar-btn">
+            <span class="icon">◫</span>
+            Availability
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="top-header">
+
+    <h1>Add Property</h1>
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search properties...">
+
+            <button>⌕</button>
+
+        </div>
+
+        <div class="notification">
+            ●
+            <span class="notification-count">3</span>
+        </div>
+
+        <div class="user-info">
+
+            <div class="profile-circle">V</div>
+
+            <div class="user-text">
+                <strong>Vanshdeep</strong>
+                <small>Owner</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-heading">
+
+    <h2>Add New Property</h2>
+
+    <p>
+        Add your PG, hostel or accommodation details.
+    </p>
+
+</section>
+
+
+<section class="form-card">
+
+<form onsubmit="addProperty(event)">
+
+    <div class="form-group">
+
+        <label>Property Name</label>
+
+        <input
+            type="text"
+            id="propertyName"
+            placeholder="Enter property name"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Location</label>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter property location"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Monthly Rent</label>
+
+        <input
+            type="number"
+            id="rent"
+            placeholder="Enter monthly rent"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Total Rooms</label>
+
+        <input
+            type="number"
+            id="rooms"
+            placeholder="Enter total rooms"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Property Type</label>
+
+        <select id="type">
+
+            <option>PG</option>
+            <option>Hostel</option>
+            <option>Shared Flat</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Description</label>
+
+        <textarea
+            id="description"
+            placeholder="Enter property description">
+        </textarea>
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="pink-button">
+
+        Add Property
+
+    </button>
+
+</form>
+
+</section>
+
+
+</main>
+
+
+<script src="../js/add-property.js"></script>
+
+</body>
+</html>

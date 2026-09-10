@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Availability</title>
+
+    <link rel="stylesheet"
+          href="../css/availability.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">SafeRent</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn">
+            <span class="icon">▰</span>
+            Dashboard
+        </a>
+
+        <a href="owner-profile.html" class="sidebar-btn">
+            <span class="icon">♟</span>
+            Profile
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn">
+            <span class="icon">♥</span>
+            My Properties
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn">
+            <span class="icon">＋</span>
+            Add Property
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn">
+            <span class="icon">▣</span>
+            Booking Requests
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            Reviews
+        </a>
+
+        <a href="availability.html" class="sidebar-btn active">
+            <span class="icon">◫</span>
+            Availability
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="top-header">
+
+    <h1>Availability</h1>
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search properties...">
+
+            <button>⌕</button>
+
+        </div>
+
+        <div class="notification">
+            ●
+            <span class="notification-count">3</span>
+        </div>
+
+        <div class="user-info">
+
+            <div class="profile-circle">V</div>
+
+            <div class="user-text">
+                <strong>Vanshdeep</strong>
+                <small>Owner</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-heading">
+
+    <h2>Manage Availability</h2>
+
+    <p>
+        Manage available rooms for your properties.
+    </p>
+
+</section>
+
+
+<section class="availability-card">
+
+
+<div class="availability-item">
+
+    <div>
+
+        <h3>SafeStay Premium PG</h3>
+
+        <p>Total Rooms: 12</p>
+
+        <p>Available Rooms: 4</p>
+
+    </div>
+
+    <button
+        class="pink-button"
+        onclick="updateAvailability()">
+
+        Update
+
+    </button>
+
+</div>
+
+
+<div class="availability-item">
+
+    <div>
+
+        <h3>Comfort Women's Hostel</h3>
+
+        <p>Total Rooms: 15</p>
+
+        <p>Available Rooms: 7</p>
+
+    </div>
+
+    <button
+        class="pink-button"
+        onclick="updateAvailability()">
+
+        Update
+
+    </button>
+
+</div>
+
+
+<div class="availability-item">
+
+    <div>
+
+        <h3>Sunrise Girls PG</h3>
+
+        <p>Total Rooms: 10</p>
+
+        <p>Available Rooms: 2</p>
+
+    </div>
+
+    <button
+        class="pink-button"
+        onclick="updateAvailability()">
+
+        Update
+
+    </button>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<script src="../js/availability.js"></script>
+
+</body>
+</html>

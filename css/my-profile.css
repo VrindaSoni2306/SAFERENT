@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 315px;
+    height: 100vh;
+
+    background: white;
+
+    padding: 55px 22px;
+
+    border-right: 1px solid #eee;
+}
+
+.logo {
+    color: #d22f82;
+    font-size: 42px;
+    font-weight: bold;
+
+    margin-left: 15px;
+    margin-bottom: 80px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-btn {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-btn:hover {
+    background: #fce4f0;
+    color: #d22f82;
+}
+
+.sidebar-btn.active {
+    background: #d22f82;
+    color: white;
+}
+
+.icon {
+    width: 22px;
+    text-align: center;
+    font-size: 21px;
+}
+
+.logout-btn {
+    margin-top: 20px;
+}
+
+
+/* MAIN */
+
+.main-content {
+    margin-left: 315px;
+    padding: 30px;
+}
+
+
+/* HEADER */
+
+.top-header {
+    height: 128px;
+
+    background: white;
+    border-radius: 22px;
+
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.top-header h1 {
+    font-size: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.search-box {
+    width: 490px;
+    height: 57px;
+
+    display: flex;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+
+    padding: 0 17px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.search-box button {
+    width: 55px;
+    border: none;
+
+    background: #d22f82;
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.notification {
+    position: relative;
+    font-size: 25px;
+}
+
+.notification-count {
+    position: absolute;
+
+    top: -11px;
+    right: -9px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: red;
+    color: white;
+
+    border-radius: 50%;
+
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-circle {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d22f82;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+.user-text strong {
+    display: block;
+}
+
+.user-text small {
+    color: #777;
+}
+
+
+/* HEADING */
+
+.page-heading {
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    color: #777;
+}
+
+
+/* PROFILE */
+
+.profile-card {
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 40px;
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.big-profile {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d22f82;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+}
+
+.profile-card h2 {
+    font-size: 28px;
+}
+
+.role {
+    color: #777;
+    margin-top: 7px;
+}
+
+.profile-details {
+    text-align: left;
+
+    margin: 30px 0;
+
+    border-top: 1px solid #eee;
+}
+
+.detail {
+    padding: 18px 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee;
+}
+
+.detail span {
+    color: #777;
+}
+
+.pink-button {
+    border: none;
+
+    background: #d22f82;
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 9px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.pink-button:hover {
+    background: #b92570;
+}

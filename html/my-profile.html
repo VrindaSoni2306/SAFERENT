@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Profile</title>
+
+    <link rel="stylesheet"
+          href="../css/my-profile.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">SafeRent</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn">
+            <span class="icon">▰</span>
+            Dashboard
+        </a>
+
+        <a href="owner-profile.html" class="sidebar-btn active">
+            <span class="icon">♟</span>
+            Profile
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn">
+            <span class="icon">♥</span>
+            My Properties
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn">
+            <span class="icon">＋</span>
+            Add Property
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn">
+            <span class="icon">▣</span>
+            Booking Requests
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            Reviews
+        </a>
+
+        <a href="availability.html" class="sidebar-btn">
+            <span class="icon">◫</span>
+            Availability
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="top-header">
+
+    <h1>Profile</h1>
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search properties...">
+
+            <button>⌕</button>
+
+        </div>
+
+        <div class="notification">
+            ●
+            <span class="notification-count">3</span>
+        </div>
+
+        <div class="user-info">
+
+            <div class="profile-circle">
+                V
+            </div>
+
+            <div class="user-text">
+                <strong>Vanshdeep</strong>
+                <small>Owner</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-heading">
+
+    <h2>My Profile</h2>
+
+    <p>
+        Manage your personal and owner information.
+    </p>
+
+</section>
+
+
+<section class="profile-card">
+
+    <div class="big-profile">
+        V
+    </div>
+
+    <h2>Vanshdeep</h2>
+
+    <p class="role">
+        Property Owner
+    </p>
+
+
+    <div class="profile-details">
+
+        <div class="detail">
+            <strong>Name</strong>
+            <span>Vanshdeep</span>
+        </div>
+
+        <div class="detail">
+            <strong>Email</strong>
+            <span>vanshdeep@example.com</span>
+        </div>
+
+        <div class="detail">
+            <strong>Phone</strong>
+            <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <div class="detail">
+            <strong>Location</strong>
+            <span>Chandigarh, Punjab</span>
+        </div>
+
+    </div>
+
+
+    <button class="pink-button" onclick="editProfile()">
+        Edit Profile
+    </button>
+
+</section>
+
+
+</main>
+
+
+<script src="../js/my-profile.js"></script>
+
+</body>
+</html>

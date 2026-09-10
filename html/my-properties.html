@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - My Properties</title>
+
+    <link rel="stylesheet"
+          href="../css/my-properties.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">SafeRent</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn">
+            <span class="icon">▰</span>
+            Dashboard
+        </a>
+
+        <a href="owner-profile.html" class="sidebar-btn">
+            <span class="icon">♟</span>
+            Profile
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn active">
+            <span class="icon">♥</span>
+            My Properties
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn">
+            <span class="icon">＋</span>
+            Add Property
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn">
+            <span class="icon">▣</span>
+            Booking Requests
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            Reviews
+        </a>
+
+        <a href="availability.html" class="sidebar-btn">
+            <span class="icon">◫</span>
+            Availability
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="top-header">
+
+    <h1>My Properties</h1>
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search properties...">
+
+            <button onclick="searchProperty()">⌕</button>
+
+        </div>
+
+        <div class="notification">
+            ●
+            <span class="notification-count">3</span>
+        </div>
+
+        <div class="user-info">
+
+            <div class="profile-circle">V</div>
+
+            <div class="user-text">
+                <strong>Vanshdeep</strong>
+                <small>Owner</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-heading">
+
+    <div>
+        <h2>My Properties</h2>
+
+        <p>
+            Manage all your listed properties.
+        </p>
+    </div>
+
+    <a href="add-property.html" class="pink-button">
+        ＋ Add Property
+    </a>
+
+</section>
+
+
+<section class="property-grid">
+
+
+<div class="property-card">
+
+    <div class="property-image">
+        🏠
+    </div>
+
+    <h3>SafeStay Premium PG</h3>
+
+    <p>📍 Chandigarh, Punjab</p>
+
+    <p>🛏 12 Rooms</p>
+
+    <h4>₹8,500 / month</h4>
+
+    <span class="status available">
+        Available
+    </span>
+
+    <div class="card-buttons">
+
+        <button onclick="editProperty()">
+            Edit
+        </button>
+
+        <button onclick="deleteProperty()">
+            Delete
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="property-card">
+
+    <div class="property-image">
+        🏠
+    </div>
+
+    <h3>Comfort Women's Hostel</h3>
+
+    <p>📍 Mohali, Punjab</p>
+
+    <p>🛏 15 Rooms</p>
+
+    <h4>₹7,500 / month</h4>
+
+    <span class="status available">
+        Available
+    </span>
+
+    <div class="card-buttons">
+
+        <button onclick="editProperty()">
+            Edit
+        </button>
+
+        <button onclick="deleteProperty()">
+            Delete
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="property-card">
+
+    <div class="property-image">
+        🏠
+    </div>
+
+    <h3>Sunrise Girls PG</h3>
+
+    <p>📍 Chandigarh, Punjab</p>
+
+    <p>🛏 10 Rooms</p>
+
+    <h4>₹9,000 / month</h4>
+
+    <span class="status pending">
+        Few Rooms
+    </span>
+
+    <div class="card-buttons">
+
+        <button onclick="editProperty()">
+            Edit
+        </button>
+
+        <button onclick="deleteProperty()">
+            Delete
+        </button>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<script src="../js/my-properties.js"></script>
+
+</body>
+</html>
