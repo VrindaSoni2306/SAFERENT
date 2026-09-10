@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SafeRent</div>
+
+        <div class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#users">Users</a>
+            <a href="#properties">Properties</a>
+            <a href="#reports">Reports</a>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <h1>Admin Dashboard</h1>
+        <p class="welcome">Welcome, Admin</p>
+
+
+        <!-- Dashboard Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>25</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Owners</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Properties</h3>
+                <p>15</p>
+            </div>
+
+            <div class="card">
+                <h3>Reports</h3>
+                <p>3</p>
+            </div>
+
+        </section>
+
+
+        <!-- User Management -->
+        <section id="users" class="section">
+
+            <h2>User Management</h2>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>Priya</td>
+                    <td>priya@gmail.com</td>
+                    <td>Active</td>
+                    <td>
+                        <button onclick="blockUser()">Block</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ananya</td>
+                    <td>ananya@gmail.com</td>
+                    <td>Active</td>
+                    <td>
+                        <button onclick="blockUser()">Block</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Property Management -->
+        <section id="properties" class="section">
+
+            <h2>Property Management</h2>
+
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Owner</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>Rose PG</td>
+                    <td>Neha</td>
+                    <td>Pending</td>
+                    <td>
+                        <button onclick="approveProperty()">Approve</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Safe Stay</td>
+                    <td>Rahul</td>
+                    <td>Approved</td>
+                    <td>
+                        <button onclick="removeProperty()">Remove</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Reports -->
+        <section id="reports" class="section">
+
+            <h2>Reports & Complaints</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Property</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>C101</td>
+                    <td>Rose PG</td>
+                    <td>Pending</td>
+                    <td>
+                        <button onclick="resolveComplaint()">Resolve</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>C102</td>
+                    <td>Safe Stay</td>
+                    <td>Resolved</td>
+                    <td>
+                        <button onclick="resolveComplaint()">Resolve</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SafeRent. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>
