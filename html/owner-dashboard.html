@@ -1,98 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Owner Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Owner Dashboard</title>
+
     <link rel="stylesheet" href="../css/owner-dashboard.css">
 </head>
 
 <body>
 
-    <div class="sidebar">
+<!-- ================= SIDEBAR ================= -->
 
-        <h2>SafeRent</h2>
+<aside class="sidebar">
 
-        <ul>
-            <li>Dashboard</li>
-            <li>My Properties</li>
-            <li>Add Property</li>
-            <li>Verification</li>
-        </ul>
-
+    <div class="logo">
+        SafeRent
     </div>
 
-    <div class="content">
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn active">
+            <span class="icon">▰</span>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="my-profile.html" class="sidebar-btn">
+            <span class="icon">♟</span>
+            <span>Profile</span>
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn">
+            <span class="icon">♥</span>
+            <span>My Properties</span>
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn">
+            <span class="icon">＋</span>
+            <span>Add Property</span>
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn">
+            <span class="icon">▣</span>
+            <span>Booking Requests</span>
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            <span>Reviews</span>
+        </a>
+
+        <a href="availability.html" class="sidebar-btn">
+            <span class="icon">◫</span>
+            <span>Availability</span>
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            <span>Logout</span>
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+    <!-- TOP HEADER -->
+
+    <header class="top-header">
 
         <h1>Owner Dashboard</h1>
 
-        <div class="cards">
+        <div class="header-right">
 
-            <div class="card">
-                <h2>12</h2>
-                <p>Properties</p>
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search properties..."
+                >
+
+                <button onclick="searchProperty()">⌕</button>
+
             </div>
 
-            <div class="card">
-                <h2>28</h2>
-                <p>Bookings</p>
+            <div class="notification">
+                ●
+                <span class="notification-count">3</span>
             </div>
 
-            <div class="card">
-                <h2>85%</h2>
-                <p>Occupancy</p>
-            </div>
+            <div class="user-info">
 
-            <div class="card">
-                <h2>4.8</h2>
-                <p>Rating</p>
+                <div class="profile-circle">
+                    V
+                </div>
+
+                <div class="user-text">
+                    <strong>Vanshdeep</strong>
+                    <small>Owner</small>
+                </div>
+
             </div>
 
         </div>
 
-        <h2>My Properties</h2>
+    </header>
 
-        <div class="property">
 
-            <h3>Sunshine PG</h3>
+    <!-- WELCOME -->
 
-            <p>₹8500/month</p>
+    <section class="welcome-card">
 
-            <button>Edit</button>
+        <div>
 
-            <button>Delete</button>
+            <h2>
+                Welcome Back, Vanshdeep 👋
+            </h2>
 
-        </div>
-
-        <h2>Add Property</h2>
-
-        <form>
-
-            <input type="text" placeholder="Property Name">
-
-            <input type="text" placeholder="City">
-
-            <input type="number" placeholder="Rent">
-
-            <input type="file">
-
-            <button>Save</button>
-
-        </form>
-
-        <h2>Verification</h2>
-
-        <div class="verification">
-
-            <p>Aadhaar ✓</p>
-
-            <p>PAN ✓</p>
-
-            <p>Property Document ⏳</p>
+            <p>
+                Manage your properties, bookings, reviews
+                and profile from your dashboard.
+            </p>
 
         </div>
 
-    </div>
+        <a href="add-property.html" class="new-button">
+            ＋ New Property
+        </a>
 
-    <script src="../js/owner-dashboard.js"></script>
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ▦
+            </div>
+
+            <div>
+                <h3>3</h3>
+                <p>Total Properties</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ♥
+            </div>
+
+            <div>
+                <h3>5</h3>
+                <p>Booking Requests</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ★
+            </div>
+
+            <div>
+                <h3>12</h3>
+                <p>Reviews</p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                !
+            </div>
+
+            <div>
+                <h3>4.5</h3>
+                <p>Average Rating</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT PROPERTIES -->
+
+    <section class="dashboard-card">
+
+        <div class="section-heading">
+
+            <h2>My Properties</h2>
+
+            <a href="my-properties.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="property-row">
+
+            <div>
+
+                <h3>SafeStay Premium PG</h3>
+
+                <p>📍 Chandigarh, Punjab</p>
+
+                <p>₹8,500 / month</p>
+
+            </div>
+
+            <span class="status available">
+                Available
+            </span>
+
+        </div>
+
+
+        <div class="property-row">
+
+            <div>
+
+                <h3>Comfort Women's Hostel</h3>
+
+                <p>📍 Mohali, Punjab</p>
+
+                <p>₹7,500 / month</p>
+
+            </div>
+
+            <span class="status available">
+                Available
+            </span>
+
+        </div>
+
+
+        <div class="property-row">
+
+            <div>
+
+                <h3>Sunrise Girls PG</h3>
+
+                <p>📍 Chandigarh, Punjab</p>
+
+                <p>₹9,000 / month</p>
+
+            </div>
+
+            <span class="status pending">
+                Few Rooms
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT ACTIVITY -->
+
+    <section class="dashboard-card">
+
+        <div class="section-heading">
+            <h2>Recent Activity</h2>
+        </div>
+
+        <div class="activity">
+
+            <div>
+                <strong>New booking request received.</strong>
+                <p>SafeStay Premium PG</p>
+            </div>
+
+            <span>Today</span>
+
+        </div>
+
+
+        <div class="activity">
+
+            <div>
+                <strong>New resident review received.</strong>
+                <p>Comfort Women's Hostel</p>
+            </div>
+
+            <span>Yesterday</span>
+
+        </div>
+
+
+        <div class="activity">
+
+            <div>
+                <strong>Property availability updated.</strong>
+                <p>Sunrise Girls PG</p>
+            </div>
+
+            <span>2 days ago</span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/owner-dashboard.js"></script>
 
 </body>
 </html>

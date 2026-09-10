@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeRent - Booking Requests</title>
+
+    <link rel="stylesheet"
+          href="../css/booking-requests.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">SafeRent</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="owner-dashboard.html" class="sidebar-btn">
+            <span class="icon">▰</span>
+            Dashboard
+        </a>
+
+        <a href="owner-profile.html" class="sidebar-btn">
+            <span class="icon">♟</span>
+            Profile
+        </a>
+
+        <a href="my-properties.html" class="sidebar-btn">
+            <span class="icon">♥</span>
+            My Properties
+        </a>
+
+        <a href="add-property.html" class="sidebar-btn">
+            <span class="icon">＋</span>
+            Add Property
+        </a>
+
+        <a href="booking-requests.html" class="sidebar-btn active">
+            <span class="icon">▣</span>
+            Booking Requests
+        </a>
+
+        <a href="reviews.html" class="sidebar-btn">
+            <span class="icon">★</span>
+            Reviews
+        </a>
+
+        <a href="availability.html" class="sidebar-btn">
+            <span class="icon">◫</span>
+            Availability
+        </a>
+
+        <button class="sidebar-btn logout-btn" onclick="logout()">
+            <span class="icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="top-header">
+
+    <h1>Booking Requests</h1>
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search properties...">
+
+            <button>⌕</button>
+
+        </div>
+
+        <div class="notification">
+            ●
+            <span class="notification-count">3</span>
+        </div>
+
+        <div class="user-info">
+
+            <div class="profile-circle">V</div>
+
+            <div class="user-text">
+                <strong>Vanshdeep</strong>
+                <small>Owner</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-heading">
+
+    <h2>Booking Requests</h2>
+
+    <p>
+        Manage booking requests from residents.
+    </p>
+
+</section>
+
+
+<section class="booking-card">
+
+
+<div class="booking-item">
+
+    <div>
+
+        <h3>Priya Sharma</h3>
+
+        <p>SafeStay Premium PG</p>
+
+        <p>📅 25 August 2026</p>
+
+        <span class="status pending">
+            Pending
+        </span>
+
+    </div>
+
+    <div class="actions">
+
+        <button
+            class="accept"
+            onclick="acceptBooking(this)">
+
+            Accept
+
+        </button>
+
+        <button
+            class="reject"
+            onclick="rejectBooking(this)">
+
+            Reject
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="booking-item">
+
+    <div>
+
+        <h3>Ananya Singh</h3>
+
+        <p>Comfort Women's Hostel</p>
+
+        <p>📅 28 August 2026</p>
+
+        <span class="status pending">
+            Pending
+        </span>
+
+    </div>
+
+    <div class="actions">
+
+        <button
+            class="accept"
+            onclick="acceptBooking(this)">
+
+            Accept
+
+        </button>
+
+        <button
+            class="reject"
+            onclick="rejectBooking(this)">
+
+            Reject
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="booking-item">
+
+    <div>
+
+        <h3>Riya Kapoor</h3>
+
+        <p>Sunrise Girls PG</p>
+
+        <p>📅 30 August 2026</p>
+
+        <span class="status confirmed">
+            Confirmed
+        </span>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<script src="../js/booking-requests.js"></script>
+
+</body>
+</html>

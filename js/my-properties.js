@@ -13,6 +13,29 @@ function logout() {
 }
 
 
+function editProperty() {
+
+    alert(
+        "Property editing option will open here."
+    );
+}
+
+
+function deleteProperty() {
+
+    var result = confirm(
+        "Are you sure you want to delete this property?"
+    );
+
+    if (result == true) {
+
+        alert(
+            "Property deleted successfully."
+        );
+    }
+}
+
+
 function searchProperty() {
 
     var search =
@@ -24,8 +47,6 @@ function searchProperty() {
 
     } else {
 
-        alert(
-            "Searching for: " + search
-        );
+        alert("Searching for: " + search);
     }
 }
