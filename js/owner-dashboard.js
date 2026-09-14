@@ -6,9 +6,11 @@ function logout() {
 
     if (result == true) {
 
+        localStorage.removeItem("isLoggedIn");
+
         alert("You have been logged out.");
 
-        window.location.href = "login.html";
+        window.location.href = "login-register.html";
     }
 }
 
