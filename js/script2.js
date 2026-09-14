@@ -163,7 +163,7 @@ navbarLogin.addEventListener("click", function (event) {
     event.preventDefault();
 
     showLogin();
-
+ 
 });
 
 

@@ -1,4 +1,12 @@
 // ========================================
+// LOGIN PROTECTION
+// ========================================
+
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login-register.html";
+}
+
+// ========================================
 // FAVORITES
 // ========================================
 
@@ -46,5 +54,17 @@ function removeFavorite3() {
     favoriteCount--;
 
     document.getElementById("favoriteCount").innerHTML = favoriteCount;
+
+}
+
+// ========================================
+// LOGOUT
+// ========================================
+
+function logout() {
+
+    localStorage.removeItem("isLoggedIn");
+
+    window.location.href = "login-register.html";
 
 }
