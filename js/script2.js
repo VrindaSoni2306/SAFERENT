@@ -218,23 +218,57 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 
+    /* CHECK REGISTERED USER */
+
+    const savedEmail =
+        localStorage.getItem("userEmail");
+
+    const savedPassword =
+        localStorage.getItem("userPassword");
+
+
+    if (email !== savedEmail || password !== savedPassword) {
+
+        showError(
+            "Invalid email or password."
+        );
+
+        return;
+    }
+
+
     /* LOGIN SUCCESS */
 
-showSuccess(
-    "Login successful! Welcome to SafeRent."
-);
+    localStorage.setItem("isLoggedIn", "true");
 
-const role = localStorage.getItem("userRole");
+    showSuccess(
+        "Login successful! Welcome to SafeRent."
+    );
 
-if (role === "User") {
-    window.location.href = "user-dashboard.html";
-}
-else if (role === "Owner") {
-    window.location.href = "owner-dashboard.html";
-}
-else if (role === "Admin") {
-    window.location.href = "admin-dashboard.html";
-}
+
+    /* GET USER ROLE */
+
+    const role =
+        localStorage.getItem("userRole");
+
+
+    /* REDIRECT ACCORDING TO ROLE */
+
+    if (role === "User") {
+
+        window.location.href = "user-dashboard.html";
+
+    }
+    else if (role === "Owner") {
+
+        window.location.href = "owner-dashboard.html";
+
+    }
+    else if (role === "Admin") {
+
+        window.location.href = "admin-dashboard.html";
+
+    }
 
 });
 
@@ -258,6 +292,9 @@ registerForm.addEventListener("submit", function (event) {
 
     const confirmPassword =
         document.getElementById("confirmPassword").value;
+
+    const role =
+        document.getElementById("registerRole").value;
 
     const terms =
         document.getElementById("terms").checked;
@@ -317,17 +354,6 @@ registerForm.addEventListener("submit", function (event) {
 
         return;
     }
-    const savedEmail = localStorage.getItem("userEmail");
-const savedPassword = localStorage.getItem("userPassword");
-
-if (email !== savedEmail || password !== savedPassword) {
-
-    showError(
-        "Invalid email or password."
-    );
-
-    return;
-}
 
 
     /* CONFIRM PASSWORD */
@@ -352,6 +378,18 @@ if (email !== savedEmail || password !== savedPassword) {
     }
 
 
+    /* ROLE VALIDATION */
+
+    if (role === "") {
+
+        showError(
+            "Please select a role."
+        );
+
+        return;
+    }
+
+
     /* TERMS */
 
     if (!terms) {
@@ -364,15 +402,31 @@ if (email !== savedEmail || password !== savedPassword) {
     }
 
 
-   /* SAVE REGISTRATION DATA */
+    /* SAVE REGISTRATION DATA */
 
-localStorage.setItem("userName", name);
-localStorage.setItem("userEmail", email);
-localStorage.setItem("userPassword", password);
+    localStorage.setItem("userName", name);
 
-showSuccess(
-    "Registration successful! Welcome to SafeRent."
-);
+    localStorage.setItem("userEmail", email);
+
+    localStorage.setItem("userPassword", password);
+
+    localStorage.setItem("userRole", role);
+
+
+    /* REGISTRATION SUCCESS */
+
+    showSuccess(
+        "Registration successful! You can now login."
+    );
+
+
+    /* SHOW LOGIN AFTER REGISTRATION */
+
+    setTimeout(function () {
+
+        showLogin();
+
+    }, 1500);
 
 });
 
