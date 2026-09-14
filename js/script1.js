@@ -64,6 +64,7 @@ function removeFavorite3() {
 function logout() {
 
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
 
     window.location.href = "login-register.html";
 

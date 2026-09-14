@@ -7,6 +7,7 @@ function logout() {
     if (result == true) {
 
         localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("currentUser");
 
         alert("You have been logged out.");
 

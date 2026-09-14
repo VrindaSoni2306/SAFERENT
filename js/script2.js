@@ -218,16 +218,23 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 
-    /* CHECK REGISTERED USER */
+    /* CHECK REGISTERED USERS */
 
-    const savedEmail =
-        localStorage.getItem("userEmail");
+    const users =
+        JSON.parse(localStorage.getItem("users")) || [];
 
-    const savedPassword =
-        localStorage.getItem("userPassword");
+    let loggedInUser = null;
 
+    for (let i = 0; i < users.length; i++) {
 
-    if (email !== savedEmail || password !== savedPassword) {
+        if (users[i].email === email && users[i].password === password) {
+
+            loggedInUser = users[i];
+            break;
+        }
+    }
+
+    if (loggedInUser === null) {
 
         showError(
             "Invalid email or password."
@@ -241,6 +248,11 @@ loginForm.addEventListener("submit", function (event) {
 
     localStorage.setItem("isLoggedIn", "true");
 
+    localStorage.setItem(
+        "currentUser",
+        JSON.stringify(loggedInUser)
+    );
+
     showSuccess(
         "Login successful! Welcome to SafeRent."
     );
@@ -249,7 +261,7 @@ loginForm.addEventListener("submit", function (event) {
     /* GET USER ROLE */
 
     const role =
-        localStorage.getItem("userRole");
+        loggedInUser.role;
 
 
     /* REDIRECT ACCORDING TO ROLE */
@@ -404,13 +416,29 @@ registerForm.addEventListener("submit", function (event) {
 
     /* SAVE REGISTRATION DATA */
 
-    localStorage.setItem("userName", name);
+    const users =
+        JSON.parse(localStorage.getItem("users")) || [];
 
-    localStorage.setItem("userEmail", email);
+    for (let i = 0; i < users.length; i++) {
 
-    localStorage.setItem("userPassword", password);
+        if (users[i].email === email) {
 
-    localStorage.setItem("userRole", role);
+            showError("An account with this email already exists.");
+
+            return;
+        }
+    }
+
+    const user = {
+        name: name,
+        email: email,
+        password: password,
+        role: role
+    };
+
+    users.push(user);
+
+    localStorage.setItem("users", JSON.stringify(users));
 
 
     /* REGISTRATION SUCCESS */
