@@ -220,9 +220,21 @@ loginForm.addEventListener("submit", function (event) {
 
     /* LOGIN SUCCESS */
 
-    showSuccess(
-        "Login successful! Welcome to SafeRent."
-    );
+showSuccess(
+    "Login successful! Welcome to SafeRent."
+);
+
+const role = localStorage.getItem("userRole");
+
+if (role === "User") {
+    window.location.href = "user-dashboard.html";
+}
+else if (role === "Owner") {
+    window.location.href = "owner-dashboard.html";
+}
+else if (role === "Admin") {
+    window.location.href = "admin-dashboard.html";
+}
 
 });
 
@@ -305,6 +317,17 @@ registerForm.addEventListener("submit", function (event) {
 
         return;
     }
+    const savedEmail = localStorage.getItem("userEmail");
+const savedPassword = localStorage.getItem("userPassword");
+
+if (email !== savedEmail || password !== savedPassword) {
+
+    showError(
+        "Invalid email or password."
+    );
+
+    return;
+}
 
 
     /* CONFIRM PASSWORD */
@@ -341,11 +364,15 @@ registerForm.addEventListener("submit", function (event) {
     }
 
 
-    /* REGISTRATION SUCCESS */
+   /* SAVE REGISTRATION DATA */
 
-    showSuccess(
-        "Registration successful! Welcome to SafeRent."
-    );
+localStorage.setItem("userName", name);
+localStorage.setItem("userEmail", email);
+localStorage.setItem("userPassword", password);
+
+showSuccess(
+    "Registration successful! Welcome to SafeRent."
+);
 
 });
 
