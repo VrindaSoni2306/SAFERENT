@@ -648,20 +648,6 @@
             }
 
 
-            const users =
-                JSON.parse(localStorage.getItem("users")) || [];
-
-            let owner = null;
-
-            for (let i = users.length - 1; i >= 0; i--) {
-
-                if (users[i].role === "Owner") {
-
-                    owner = users[i];
-                    break;
-                }
-            }
-
             const bookings =
                 JSON.parse(localStorage.getItem("bookings")) || [];
 
@@ -672,8 +658,8 @@
                 location: property.location,
                 userName: name,
                 userEmail: currentUser.email,
-                ownerName: owner ? owner.name : "Property Owner",
-                ownerEmail: owner ? owner.email : "owner@test.com",
+                ownerName: property.ownerName || "Property Owner",
+                ownerEmail: property.ownerEmail || "owner@test.com",
                 phone: phone,
                 moveInDate: moveInDate,
                 duration: stayDuration,

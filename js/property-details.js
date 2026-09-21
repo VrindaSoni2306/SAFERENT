@@ -1,3 +1,4 @@
+
 const properties = {
 
     1: {
@@ -9,7 +10,9 @@ const properties = {
         baths: "2 Baths",
         area: "1200 sq.ft",
         safety: "9.2/10",
-        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=80",
+        ownerName: "Owner 1",
+        ownerEmail: "owner1@test.com"
     },
 
     2: {
@@ -21,7 +24,9 @@ const properties = {
         baths: "2 Baths",
         area: "1650 sq.ft",
         safety: "8.8/10",
-        image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80",
+        ownerName: "Owner 1",
+        ownerEmail: "owner1@test.com"
     },
 
     3: {
@@ -33,7 +38,9 @@ const properties = {
         baths: "3 Baths",
         area: "2000 sq.ft",
         safety: "9.5/10",
-        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80",
+        ownerName: "Owner 2",
+        ownerEmail: "owner2@test.com"
     },
 
     4: {
@@ -45,7 +52,9 @@ const properties = {
         baths: "2 Baths",
         area: "1100 sq.ft",
         safety: "9.3/10",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80",
+        ownerName: "Owner 2",
+        ownerEmail: "owner2@test.com"
     },
 
     5: {
@@ -57,7 +66,9 @@ const properties = {
         baths: "1 Bath",
         area: "750 sq.ft",
         safety: "9.0/10",
-        image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=900&q=80",
+        ownerName: "Owner 1",
+        ownerEmail: "owner1@test.com"
     },
 
     6: {
@@ -69,7 +80,9 @@ const properties = {
         baths: "3 Baths",
         area: "1800 sq.ft",
         safety: "9.4/10",
-        image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&q=80"
+        image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&q=80",
+        ownerName: "Owner 2",
+        ownerEmail: "owner2@test.com"
     }
 
 };
@@ -88,24 +101,32 @@ const property = properties[propertyId];
 
 if (property) {
 
-    document.getElementById("propertyImage").src = property.image;
+    document.getElementById("propertyImage").src =
+        property.image;
 
-    document.getElementById("propertyTitle").textContent = property.title;
+    document.getElementById("propertyTitle").textContent =
+        property.title;
 
     document.getElementById("propertyLocation").textContent =
         "📍 " + property.location;
 
-    document.getElementById("propertyType").textContent = property.type;
+    document.getElementById("propertyType").textContent =
+        property.type;
 
-    document.getElementById("propertyPrice").textContent = property.price;
+    document.getElementById("propertyPrice").textContent =
+        property.price;
 
-    document.getElementById("propertyBeds").textContent = property.beds;
+    document.getElementById("propertyBeds").textContent =
+        property.beds;
 
-    document.getElementById("propertyBaths").textContent = property.baths;
+    document.getElementById("propertyBaths").textContent =
+        property.baths;
 
-    document.getElementById("propertyArea").textContent = property.area;
+    document.getElementById("propertyArea").textContent =
+        property.area;
 
-    document.getElementById("propertySafety").textContent = property.safety;
+    document.getElementById("propertySafety").textContent =
+        property.safety;
 
 }
 
@@ -117,6 +138,11 @@ const contactOwnerBtn =
 
 contactOwnerBtn.addEventListener("click", function () {
 
-    alert("Contact request sent for " + property.title);
+    alert(
+        "Contact request sent for " +
+        property.title +
+        "\nOwner: " +
+        property.ownerName
+    );
 
 });

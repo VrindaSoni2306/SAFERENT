@@ -7,6 +7,53 @@ if (localStorage.getItem("isLoggedIn") !== "true") {
 }
 
 // ========================================
+// SHOW LOGGED IN USER NAME
+// ========================================
+
+var currentUser =
+    JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser != null) {
+
+    document.getElementById("userName").innerHTML =
+        currentUser.name;
+
+    document.getElementById("welcomeUser").innerHTML =
+        currentUser.name;
+
+    document.getElementById("userInitial").innerHTML =
+        currentUser.name.charAt(0).toUpperCase();
+}
+
+// ========================================
+// SHOW USER PROFILE DETAILS
+// ========================================
+
+if (currentUser != null) {
+
+    document.getElementById("profileName").innerHTML =
+        currentUser.name;
+
+    document.getElementById("fullProfileName").innerHTML =
+        currentUser.name;
+
+    document.getElementById("profileInitial").innerHTML =
+        currentUser.name.charAt(0).toUpperCase();
+
+    document.getElementById("largeProfileInitial").innerHTML =
+        currentUser.name.charAt(0).toUpperCase();
+
+    document.getElementById("profileFullName").value =
+        currentUser.name;
+
+    document.getElementById("profileEmail").value =
+        currentUser.email;
+
+    document.getElementById("accountType").innerHTML =
+        currentUser.role;
+}
+
+// ========================================
 // FAVORITES
 // ========================================
 

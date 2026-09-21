@@ -25,7 +25,7 @@
     <nav class="sidebar-menu">
 
         <a href="owner-dashboard.html" class="sidebar-btn">
-            <span class="icon">▰</span>
+            <span class="icon">▲</span>
             Dashboard
         </a>
 
@@ -55,7 +55,7 @@
         </a>
 
         <a href="availability.html" class="sidebar-btn">
-            <span class="icon">◫</span>
+            <span class="icon">○</span>
             Availability
         </a>
 
@@ -96,10 +96,12 @@
 
         <div class="user-info">
 
-            <div class="profile-circle">V</div>
+            <div class="profile-circle" id="ownerInitial">
+                V
+            </div>
 
             <div class="user-text">
-                <strong>Vanshdeep</strong>
+                <strong id="ownerName">Owner</strong>
                 <small>Owner</small>
             </div>
 
@@ -113,11 +115,13 @@
 <section class="page-heading">
 
     <div>
+
         <h2>My Properties</h2>
 
         <p>
             Manage all your listed properties.
         </p>
+
     </div>
 
     <a href="add-property.html" class="pink-button">
@@ -127,107 +131,11 @@
 </section>
 
 
-<section class="property-grid">
+<section class="property-grid" id="propertyGrid">
 
-
-<div class="property-card">
-
-    <div class="property-image">
-        🏠
-    </div>
-
-    <h3>SafeStay Premium PG</h3>
-
-    <p>📍 Chandigarh, Punjab</p>
-
-    <p>🛏 12 Rooms</p>
-
-    <h4>₹8,500 / month</h4>
-
-    <span class="status available">
-        Available
-    </span>
-
-    <div class="card-buttons">
-
-        <button onclick="editProperty()">
-            Edit
-        </button>
-
-        <button onclick="deleteProperty()">
-            Delete
-        </button>
-
-    </div>
-
-</div>
-
-
-<div class="property-card">
-
-    <div class="property-image">
-        🏠
-    </div>
-
-    <h3>Comfort Women's Hostel</h3>
-
-    <p>📍 Mohali, Punjab</p>
-
-    <p>🛏 15 Rooms</p>
-
-    <h4>₹7,500 / month</h4>
-
-    <span class="status available">
-        Available
-    </span>
-
-    <div class="card-buttons">
-
-        <button onclick="editProperty()">
-            Edit
-        </button>
-
-        <button onclick="deleteProperty()">
-            Delete
-        </button>
-
-    </div>
-
-</div>
-
-
-<div class="property-card">
-
-    <div class="property-image">
-        🏠
-    </div>
-
-    <h3>Sunrise Girls PG</h3>
-
-    <p>📍 Chandigarh, Punjab</p>
-
-    <p>🛏 10 Rooms</p>
-
-    <h4>₹9,000 / month</h4>
-
-    <span class="status pending">
-        Few Rooms
-    </span>
-
-    <div class="card-buttons">
-
-        <button onclick="editProperty()">
-            Edit
-        </button>
-
-        <button onclick="deleteProperty()">
-            Delete
-        </button>
-
-    </div>
-
-</div>
-
+    <p id="noProperties">
+        No properties added yet.
+    </p>
 
 </section>
 
@@ -238,4 +146,5 @@
 <script src="../js/my-properties.js"></script>
 
 </body>
+
 </html>
