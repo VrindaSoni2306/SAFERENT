@@ -430,11 +430,12 @@ registerForm.addEventListener("submit", function (event) {
     }
 
     const user = {
-        name: name,
-        email: email,
-        password: password,
-        role: role
-    };
+    name: name,
+    email: email,
+    password: password,
+    role: role,
+    status: "Active"
+};
 
     users.push(user);
 
