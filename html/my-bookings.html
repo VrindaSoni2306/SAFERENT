@@ -56,7 +56,7 @@
             <span>Complaints</span>
         </a>
 
-        <a href="logout.html" class="nav-item logout">
+       <a href="#" class="nav-item logout" onclick="logout()">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span>Logout</span>
         </a>
@@ -120,7 +120,7 @@
 
     <!-- ================= BOOKINGS ================= -->
 
-    <section class="bookings-page">
+    <section class="bookings-page" id="bookingsPage">
 
         <div class="bookings-header">
 
@@ -129,7 +129,7 @@
                 <p>View and manage your property bookings</p>
             </div>
 
-            <div class="booking-count">
+            <div class="booking-count" id="bookingCount">
                 <i class="fa-solid fa-calendar-check"></i>
                 <span>2 Bookings</span>
             </div>
@@ -137,167 +137,12 @@
         </div>
 
 
-        <!-- BOOKING CARD 1 -->
-
-        <div class="booking-card">
-
-            <div class="booking-image">
-
-                <img src="../images/pg1.jpg" alt="SafeRent Property">
-
-                <span class="booking-status confirmed">
-                    Confirmed
-                </span>
-
-            </div>
-
-
-            <div class="booking-details">
-
-                <div class="booking-title">
-
-                    <h3>Sunshine Girls PG</h3>
-
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Chandigarh
-                    </span>
-
-                </div>
-
-
-                <div class="booking-info">
-
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-
-                        <div>
-                            <small>Check-in</small>
-                            <strong>15 Sep 2026</strong>
-                        </div>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-
-                        <div>
-                            <small>Check-out</small>
-                            <strong>15 Dec 2026</strong>
-                        </div>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-bed"></i>
-
-                        <div>
-                            <small>Room Type</small>
-                            <strong>Single Room</strong>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="booking-bottom">
-
-                    <div class="booking-price">
-                        <small>Monthly Rent</small>
-                        <strong>₹12,000</strong>
-                    </div>
-
-                    <button class="view-booking">
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- BOOKING CARD 2 -->
-
-        <div class="booking-card">
-
-            <div class="booking-image">
-
-                <img src="../images/pg2.jpg" alt="SafeRent Property">
-
-                <span class="booking-status pending">
-                    Pending
-                </span>
-
-            </div>
-
-
-            <div class="booking-details">
-
-                <div class="booking-title">
-
-                    <h3>Green Valley Hostel</h3>
-
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Mohali
-                    </span>
-
-                </div>
-
-
-                <div class="booking-info">
-
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-
-                        <div>
-                            <small>Check-in</small>
-                            <strong>01 Oct 2026</strong>
-                        </div>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-
-                        <div>
-                            <small>Check-out</small>
-                            <strong>01 Jan 2027</strong>
-                        </div>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-bed"></i>
-
-                        <div>
-                            <small>Room Type</small>
-                            <strong>Shared Room</strong>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="booking-bottom">
-
-                    <div class="booking-price">
-                        <small>Monthly Rent</small>
-                        <strong>₹8,500</strong>
-                    </div>
-
-                    <button class="view-booking">
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
+        <div id="bookingList"></div>
 
 
         <!-- EMPTY BOOKING SECTION -->
 
-        <div class="no-bookings">
+        <div class="no-bookings" id="noBookings">
 
             <i class="fa-solid fa-calendar-xmark"></i>
 
@@ -312,6 +157,88 @@
     </section>
 
 </main>
+
+<script>
+
+    function logout() {
+
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("currentUser");
+
+        window.location.href = "login-register.html";
+    }
+
+
+    function loadMyBookings() {
+
+        var currentUser =
+            JSON.parse(localStorage.getItem("currentUser"));
+
+        var bookingList =
+            document.getElementById("bookingList");
+
+        var noBookings =
+            document.getElementById("noBookings");
+
+        var bookingCount =
+            document.getElementById("bookingCount");
+
+        var bookings =
+            JSON.parse(localStorage.getItem("bookings")) || [];
+
+        var myBookings = [];
+
+        if (currentUser !== null) {
+
+            for (var i = 0; i < bookings.length; i++) {
+
+                if (bookings[i].userEmail === currentUser.email) {
+
+                    myBookings.push(bookings[i]);
+                }
+            }
+        }
+
+        bookingCount.innerHTML =
+            "<i class='fa-solid fa-calendar-check'></i>" +
+            "<span>" + myBookings.length + " Bookings</span>";
+
+        if (myBookings.length === 0) {
+
+            noBookings.style.display = "block";
+
+            return;
+        }
+
+        noBookings.style.display = "none";
+        bookingList.innerHTML = "";
+
+        for (var j = 0; j < myBookings.length; j++) {
+
+            var booking = myBookings[j];
+
+            bookingList.innerHTML +=
+                "<div class='booking-card'>" +
+                "<div class='booking-details'>" +
+                "<div class='booking-title'>" +
+                "<h3>" + booking.propertyName + "</h3>" +
+                "<span><i class='fa-solid fa-location-dot'></i>" + booking.location + "</span>" +
+                "</div>" +
+                "<div class='booking-info'>" +
+                "<div><i class='fa-solid fa-calendar'></i><div><small>Move-in</small><strong>" + booking.moveInDate + "</strong></div></div>" +
+                "<div><i class='fa-solid fa-bed'></i><div><small>Duration</small><strong>" + booking.duration + "</strong></div></div>" +
+                "<div><i class='fa-solid fa-user'></i><div><small>People</small><strong>" + booking.numberOfPeople + "</strong></div></div>" +
+                "</div>" +
+                "<div class='booking-bottom'><strong>" + booking.status + "</strong></div>" +
+                "</div>" +
+                "</div>";
+        }
+    }
+
+
+    loadMyBookings();
+
+</script>
 
 </body>
 </html>

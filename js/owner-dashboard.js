@@ -1,11 +1,3 @@
-// ========================================
-// LOGIN PROTECTION
-// ========================================
-
-if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login-register.html";
-}    
-
 function logout() {
 
     var result = confirm(
@@ -15,6 +7,7 @@ function logout() {
     if (result == true) {
 
         localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("currentUser");
 
         alert("You have been logged out.");
 

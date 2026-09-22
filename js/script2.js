@@ -163,7 +163,7 @@ navbarLogin.addEventListener("click", function (event) {
     event.preventDefault();
 
     showLogin();
-
+ 
 });
 
 
@@ -218,11 +218,69 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 
+    /* CHECK REGISTERED USERS */
+
+    const users =
+        JSON.parse(localStorage.getItem("users")) || [];
+
+    let loggedInUser = null;
+
+    for (let i = 0; i < users.length; i++) {
+
+        if (users[i].email === email && users[i].password === password) {
+
+            loggedInUser = users[i];
+            break;
+        }
+    }
+
+    if (loggedInUser === null) {
+
+        showError(
+            "Invalid email or password."
+        );
+
+        return;
+    }
+
+
     /* LOGIN SUCCESS */
+
+    localStorage.setItem("isLoggedIn", "true");
+
+    localStorage.setItem(
+        "currentUser",
+        JSON.stringify(loggedInUser)
+    );
 
     showSuccess(
         "Login successful! Welcome to SafeRent."
     );
+
+
+    /* GET USER ROLE */
+
+    const role =
+        loggedInUser.role;
+
+
+    /* REDIRECT ACCORDING TO ROLE */
+
+    if (role === "User") {
+
+        window.location.href = "user-dashboard.html";
+
+    }
+    else if (role === "Owner") {
+
+        window.location.href = "owner-dashboard.html";
+
+    }
+    else if (role === "Admin") {
+
+        window.location.href = "admin-dashboard.html";
+
+    }
 
 });
 
@@ -246,6 +304,9 @@ registerForm.addEventListener("submit", function (event) {
 
     const confirmPassword =
         document.getElementById("confirmPassword").value;
+
+    const role =
+        document.getElementById("registerRole").value;
 
     const terms =
         document.getElementById("terms").checked;
@@ -329,6 +390,18 @@ registerForm.addEventListener("submit", function (event) {
     }
 
 
+    /* ROLE VALIDATION */
+
+    if (role === "") {
+
+        showError(
+            "Please select a role."
+        );
+
+        return;
+    }
+
+
     /* TERMS */
 
     if (!terms) {
@@ -341,11 +414,47 @@ registerForm.addEventListener("submit", function (event) {
     }
 
 
+    /* SAVE REGISTRATION DATA */
+
+    const users =
+        JSON.parse(localStorage.getItem("users")) || [];
+
+    for (let i = 0; i < users.length; i++) {
+
+        if (users[i].email === email) {
+
+            showError("An account with this email already exists.");
+
+            return;
+        }
+    }
+
+    const user = {
+        name: name,
+        email: email,
+        password: password,
+        role: role
+    };
+
+    users.push(user);
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+
     /* REGISTRATION SUCCESS */
 
     showSuccess(
-        "Registration successful! Welcome to SafeRent."
+        "Registration successful! You can now login."
     );
+
+
+    /* SHOW LOGIN AFTER REGISTRATION */
+
+    setTimeout(function () {
+
+        showLogin();
+
+    }, 1500);
 
 });
 

@@ -54,14 +54,14 @@
 
 
             <li>
-                <a href="#">
+                <a href="about.html">
                     About
                 </a>
             </li>
 
 
             <li>
-                <a href="#">
+                <a href="contact.html">
                     Contact
                 </a>
             </li>
@@ -576,6 +576,9 @@
             const bookingResult =
                 document.getElementById("bookingResult");
 
+            const currentUser =
+                JSON.parse(localStorage.getItem("currentUser"));
+
 
             if (name === "") {
 
@@ -584,6 +587,14 @@
 
                 return;
 
+            }
+
+            if (currentUser === null) {
+
+                bookingResult.textContent =
+                    "Please login before submitting a booking request.";
+
+                return;
             }
 
 
@@ -636,6 +647,33 @@
 
             }
 
+
+            const bookings =
+                JSON.parse(localStorage.getItem("bookings")) || [];
+
+            const booking = {
+                id: new Date().getTime(),
+                propertyId: propertyId,
+                propertyName: property.title,
+                location: property.location,
+                userName: name,
+                userEmail: currentUser.email,
+                ownerName: property.ownerName || "Property Owner",
+                ownerEmail: property.ownerEmail || "owner@test.com",
+                phone: phone,
+                moveInDate: moveInDate,
+                duration: stayDuration,
+                numberOfPeople: numberOfPeople,
+                requirements: requirements,
+                status: "Pending"
+            };
+
+            bookings.push(booking);
+
+            localStorage.setItem(
+                "bookings",
+                JSON.stringify(bookings)
+            );
 
             bookingResult.textContent =
                 "Booking request submitted successfully!";
