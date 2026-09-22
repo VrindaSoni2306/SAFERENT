@@ -99,26 +99,28 @@ function addProperty(event) {
 
     var property = {
 
-        id: new Date().getTime(),
+    id: new Date().getTime(),
 
-        name: name,
+    name: name,
 
-        location: location,
+    location: location,
 
-        rent: rent,
+    rent: rent,
 
-        rooms: rooms,
+    rooms: rooms,
 
-        type: type,
+    type: type,
 
-        image: image,
+    image: image,
 
-        description: description,
+    description: description,
 
-        ownerName: currentUser.name,
+    ownerName: currentUser.name,
 
-        ownerEmail: currentUser.email
-    };
+    ownerEmail: currentUser.email,
+
+    status: "Pending"
+};
 
 
     // Add property to array
