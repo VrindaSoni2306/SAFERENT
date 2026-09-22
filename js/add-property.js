@@ -69,6 +69,9 @@ function addProperty(event) {
     var type =
         document.getElementById("type").value;
 
+    var image =
+        document.getElementById("image").value.trim();
+
     var description =
         document.getElementById("description").value;
 
@@ -108,6 +111,8 @@ function addProperty(event) {
 
         type: type,
 
+        image: image,
+
         description: description,
 
         ownerName: currentUser.name,
@@ -140,5 +145,6 @@ function addProperty(event) {
     document.getElementById("location").value = "";
     document.getElementById("rent").value = "";
     document.getElementById("rooms").value = "";
+    document.getElementById("image").value = "";
     document.getElementById("description").value = "";
 }
