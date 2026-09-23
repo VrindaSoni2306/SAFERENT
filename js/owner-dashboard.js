@@ -1,3 +1,36 @@
+// ========================================
+// LOGIN PROTECTION
+// ========================================
+
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login-register.html";
+}
+
+
+// ========================================
+// SHOW LOGGED IN OWNER NAME
+// ========================================
+
+var currentUser =
+    JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser != null) {
+
+    document.getElementById("ownerName").innerHTML =
+        currentUser.name;
+
+    document.getElementById("ownerWelcome").innerHTML =
+        currentUser.name;
+
+    document.getElementById("ownerInitial").innerHTML =
+        currentUser.name.charAt(0).toUpperCase();
+}
+
+
+// ========================================
+// LOGOUT
+// ========================================
+
 function logout() {
 
     var result = confirm(
@@ -15,6 +48,10 @@ function logout() {
     }
 }
 
+
+// ========================================
+// SEARCH PROPERTY
+// ========================================
 
 function searchProperty() {
 
